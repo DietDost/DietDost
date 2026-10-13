@@ -1,6 +1,19 @@
 /* DietDost Service Worker v4: refresh the offline app shell so profile-photo code is available offline. */
-const CACHE_NAME = "dietdost-shell-v4";
+const CACHE_NAME = "dietdost-shell-v5";
 const APP_SHELL = ["./", "./index.html", "./manifest.json", "./icon.svg"];
+const PHOTO_ASSETS = [
+  "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=1200&q=82",
+  "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=1200&q=82",
+  "https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=1200&q=82",
+  "https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1200&q=82",
+  "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=360&q=75",
+  "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=360&q=75",
+  "https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=360&q=75",
+  "https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=360&q=75",
+  "https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=900&q=82",
+  "https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=900&q=82",
+  "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=900&q=82"
+];
 self.addEventListener("install", event => {
   event.waitUntil((async () => {
     const cache = await caches.open(CACHE_NAME);
@@ -9,6 +22,13 @@ self.addEventListener("install", event => {
         const response = await fetch(path, { cache: "no-store" });
         if (response && response.ok) await cache.put(path, response);
       } catch (e) { /* Keep any already cached shell item. */ }
+    }));
+    await Promise.all(PHOTO_ASSETS.map(async url => {
+      try {
+        const request = new Request(url, { mode: "no-cors", cache: "no-store" });
+        const response = await fetch(request);
+        if (response && (response.ok || response.type === "opaque")) await cache.put(url, response);
+      } catch (e) { /* Photos are decorative; app functionality remains available without them. */ }
     }));
     // Wait for the app's Update Now control to activate this worker.
   })());
@@ -27,6 +47,23 @@ self.addEventListener("fetch", event => {
   const request = event.request;
   if (request.method !== "GET") return;
   const url = new URL(request.url);
+  if (url.origin === "https://images.unsplash.com") {
+    event.respondWith((async () => {
+      const cached = await caches.match(request) || await caches.match(url.href);
+      if (cached) return cached;
+      try {
+        const response = await fetch(request, { mode: "no-cors" });
+        if (response && (response.ok || response.type === "opaque")) {
+          const cache = await caches.open(CACHE_NAME);
+          await cache.put(request, response.clone());
+        }
+        return response;
+      } catch (error) {
+        return new Response("", { status: 503, statusText: "Photo unavailable offline" });
+      }
+    })());
+    return;
+  }
   if (url.origin !== self.location.origin) return;
   if (request.mode === "navigate") {
     event.respondWith((async () => {

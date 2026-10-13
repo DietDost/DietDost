@@ -118,6 +118,133 @@ body{background:radial-gradient(ellipse at 12% 0%,#eaf8ef 0,transparent 31rem),v
 <style id="dietdost-feature-hub-css">
 .feature-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.feature-card{position:relative;display:flex;flex-direction:column;gap:10px;background:#fff;border:1px solid var(--line);border-radius:19px;padding:17px;min-width:0;box-shadow:0 6px 22px rgba(24,74,48,.04)}.feature-card h3{margin:0;font-size:17px}.feature-card p{margin:0;color:var(--muted);font-size:13px;line-height:1.55}.feature-icon{font-size:28px}.feature-tag{align-self:flex-start;font-size:10px;font-weight:900;letter-spacing:.07em;background:#e5f7eb;color:#126846;border-radius:999px;padding:5px 9px}.premium-tag{background:#fff1d7;color:#8b5a08}.feature-action{margin-top:2px}.feature-result{border:1px solid #e2eee5;background:#f6fbf7;border-radius:12px;padding:11px;font-size:12px;line-height:1.6;color:#315341;white-space:pre-wrap}.feature-locked{opacity:.78}.feature-locked:after{content:'🔒 PLUS FEATURE';position:absolute;inset:auto 12px 12px auto;background:#fff4dc;color:#82560d;border:1px solid #f0ddb4;border-radius:999px;padding:5px 8px;font-size:9px;font-weight:900}.photo-preview{width:100%;max-height:220px;object-fit:contain;border-radius:12px;background:#f4f7f4}.plan-pill{display:inline-block;border-radius:999px;padding:3px 8px;background:#eaf7ee;font-size:11px;font-weight:800}@media(max-width:900px){.feature-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:580px){.feature-grid{grid-template-columns:1fr}.feature-card{padding:15px}}
 </style>
+
+<style id="dietdost-premium-mobile-ui-v1">
+/* Visual-only mobile polish: intentionally does not alter app logic or storage keys. */
+:root{--dd-focus:rgba(35,157,99,.22)}
+html{scroll-padding-top:86px;scroll-behavior:smooth}
+body{background:linear-gradient(180deg,#f1f8f3 0,#f7faf8 240px,#f7faf8 100%)}
+button,.btn,.tab,select,input{ -webkit-tap-highlight-color:transparent }
+button:active,.btn:active,.tab:active{transform:scale(.985)}
+.btn:focus-visible,.tab:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid var(--dd-focus);outline-offset:2px}
+.topbar{position:relative}
+.logo{flex-shrink:0}
+.hero{position:relative;overflow:hidden;background:linear-gradient(125deg,#103d2c 0%,#14764e 56%,#36a875 100%)}
+.hero:after{content:"";position:absolute;width:190px;height:190px;right:-72px;top:-90px;border:1px solid #ffffff20;border-radius:50%;box-shadow:0 0 0 22px #ffffff09,0 0 0 45px #ffffff06;pointer-events:none}
+.hero>div{position:relative;z-index:1}
+.card,.stat,.feature-card,.planner-meal-card{overflow-wrap:anywhere}
+@media(max-width:760px){
+  html{scroll-padding-top:74px}
+  .app{padding:12px 12px calc(20px + env(safe-area-inset-bottom))}
+  .topbar{position:relative;align-items:center;gap:10px;margin-bottom:15px}
+  .brand{min-width:0;gap:9px}.brand>div:last-child{min-width:0}.brand h1{font-size:20px;line-height:1.2}.brand p{font-size:11px;max-width:180px}
+  .logo{width:40px;height:40px;border-radius:13px;font-size:21px}
+  .top-actions{gap:7px;flex-wrap:nowrap}.lang-select{max-width:104px;min-height:42px;padding:8px 6px;font-size:12px}
+  .hero{margin-bottom:14px;padding:19px;border-radius:21px;box-shadow:0 10px 24px rgba(18,89,53,.13)}
+  .hero h2{font-size:clamp(22px,6vw,26px);line-height:1.16;letter-spacing:-.6px;max-width:390px}
+  .hero p{font-size:13px;line-height:1.55;max-width:38ch}
+  .hero-side{margin-top:13px;padding:11px 12px;border:1px solid #ffffff26;border-radius:14px;background:#ffffff0d;width:100%}
+  .hero-side strong{font-size:22px}.hero-side .track{max-width:100%}
+  .tabs{position:sticky;top:0;z-index:8;margin:0 -12px 15px;padding:8px 12px 9px;gap:7px;background:rgba(247,250,248,.94);border:0;border-bottom:1px solid #e4eee7;border-radius:0;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);scrollbar-width:none;overscroll-behavior-x:contain}
+  .tabs::-webkit-scrollbar{display:none}
+  .tab{flex:0 0 auto;min-height:40px;padding:9px 12px;border:1px solid #e0ebe4;border-radius:999px;background:#fff;font-size:12px;box-shadow:0 2px 6px #1c50300a}
+  .tab.active{background:#dff5e7;border-color:#a9dabc;color:#105f3e;box-shadow:inset 0 0 0 1px #ffffff80,0 3px 9px #1c50300d}
+  .grid{gap:12px}.card{padding:15px;border-radius:18px;box-shadow:0 5px 18px rgba(25,69,45,.045)}.card-head{gap:9px;margin-bottom:13px}.card h3{font-size:16px;line-height:1.3}.sub{font-size:12px}
+  .stats{gap:9px}.stat{padding:12px;border-radius:15px;min-width:0}.stat strong{font-size:22px;margin:7px 0 2px}.stat-top{font-size:11px;line-height:1.4}.stat small{font-size:10px;line-height:1.4}
+  .macro-grid{gap:9px}.macro{padding:12px;border-radius:14px}.macro strong{font-size:16px}
+  .quick-foods-panel{border-radius:16px}.food-search-wrap .search{min-height:48px}.field input,.field select,.search,.control{min-height:44px}
+  .btn,.recipe-remove{min-height:42px}.btn-small{min-height:34px}
+  .meal-block{border-radius:14px}.food-row{gap:8px;align-items:center}.food-name{font-size:13px;line-height:1.35}.food-meta{font-size:11px}.food-right{flex-shrink:0}.food-kcal{font-size:12px}
+  .planner-meal-card{border-radius:17px}.planner-meal-top{padding:15px}.planner-meal-body{padding:13px}
+  .feature-card{border-radius:17px;box-shadow:0 5px 17px rgba(24,74,48,.045)}
+  .modal-backdrop{padding:10px;align-items:end}.modal{width:100%;max-height:min(90dvh,780px);padding:18px;border-radius:22px 22px 16px 16px;padding-bottom:calc(18px + env(safe-area-inset-bottom))}.modal-head h2{font-size:20px}.modal-actions{flex-wrap:wrap}.modal-actions .btn{flex:1}
+  .toast{bottom:calc(14px + env(safe-area-inset-bottom));max-width:calc(100% - 24px)}
+  .footer{padding-bottom:calc(14px + env(safe-area-inset-bottom))}
+}
+@media(max-width:380px){
+  .app{padding-left:9px;padding-right:9px}.tabs{margin-left:-9px;margin-right:-9px;padding-left:9px;padding-right:9px}
+  .brand h1{font-size:18px}.brand p{max-width:145px}.top-actions{gap:5px}.lang-select{max-width:90px;font-size:11px}
+  .hero{padding:16px}.card{padding:12px}.stat{padding:10px}.stat strong{font-size:20px}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+
+
+<style id="dietdost-onboarding-premium">
+#ddOnboarding{position:fixed;inset:0;z-index:10050;background:linear-gradient(155deg,#f2f8f3 0%,#fbfcf7 60%,#e8f6ed 100%);display:none;overflow:auto;color:#173629}
+#ddOnboarding.dd-open{display:block}
+.dd-onboard-shell{width:min(760px,100%);min-height:100%;margin:auto;padding:clamp(18px,4vw,38px);display:flex;flex-direction:column}
+.dd-onboard-top{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:24px}
+.dd-onboard-brand{display:flex;align-items:center;gap:10px;font-weight:900;font-size:19px;letter-spacing:-.5px}
+.dd-onboard-mark{display:grid;place-items:center;width:43px;height:43px;border-radius:15px;background:linear-gradient(145deg,#20b879,#0f6948);color:white;font-size:23px;box-shadow:0 8px 18px #168b5b2b}
+.dd-onboard-stepcount{font-size:12px;font-weight:800;color:#537363;background:#e2f3e7;border-radius:999px;padding:8px 12px}
+.dd-onboard-progress{height:6px;border-radius:999px;background:#dfeae1;overflow:hidden;margin-bottom:28px}
+.dd-onboard-progress span{display:block;height:100%;width:33.333%;border-radius:inherit;background:linear-gradient(90deg,#20b879,#0f8c5b);transition:width .25s}
+.dd-onboard-intro{margin-bottom:23px}
+.dd-onboard-eyebrow{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#17845b;font-weight:900;margin-bottom:8px}
+.dd-onboard-intro h2{font-size:clamp(27px,5vw,39px);line-height:1.12;letter-spacing:-1.2px;margin:0 0 10px;color:#143c2c}
+.dd-onboard-intro p{font-size:14px;line-height:1.65;color:#6b7c71;margin:0;max-width:56ch}
+.dd-onboard-panel{background:#fff;border:1px solid #e1ece3;border-radius:24px;padding:clamp(16px,3vw,25px);box-shadow:0 12px 32px #184a300b}
+.dd-onboard-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.dd-onboard-field{display:flex;flex-direction:column;gap:7px;min-width:0}
+.dd-onboard-field label{font-size:12px;font-weight:800;color:#486353}
+.dd-onboard-field input,.dd-onboard-field select,.dd-onboard-field textarea{width:100%;min-width:0;border:1px solid #dce8df;background:#fbfdfb;border-radius:13px;padding:13px;color:#173629;outline:none}
+.dd-onboard-field input:focus,.dd-onboard-field select:focus,.dd-onboard-field textarea:focus{border-color:#20a66c;box-shadow:0 0 0 4px #20a66c18}
+.dd-onboard-field textarea{resize:vertical;min-height:80px}
+.dd-onboard-options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.dd-onboard-choice{position:relative;display:flex;align-items:center;gap:11px;border:1px solid #e0eae2;background:#fff;border-radius:15px;padding:14px;cursor:pointer;min-height:68px;transition:.15s}
+.dd-onboard-choice input{position:absolute;opacity:0;pointer-events:none}
+.dd-onboard-choice:has(input:checked){border-color:#20b879;background:#eaf9f0;box-shadow:inset 0 0 0 1px #20b879}
+.dd-onboard-choice .dd-choice-icon{font-size:23px;flex-shrink:0}
+.dd-onboard-choice strong{font-size:13px;display:block;color:#1c3c2c}
+.dd-onboard-choice small{display:block;color:#728176;font-size:11px;margin-top:2px}
+.dd-onboard-footer{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:auto;padding-top:22px}
+.dd-onboard-privacy{font-size:11px;line-height:1.5;color:#7b8b80;max-width:280px}
+.dd-onboard-actions{display:flex;gap:9px;align-items:center}
+.dd-onboard-btn{border:0;border-radius:14px;padding:13px 21px;min-height:48px;font-weight:850;cursor:pointer}
+.dd-onboard-back{background:#fff;border:1px solid #dce8df;color:#375544}
+.dd-onboard-next{background:linear-gradient(135deg,#20b879,#0d8053);color:#fff;box-shadow:0 8px 18px #168b5b2b;min-width:142px}
+.dd-onboard-next:disabled{opacity:.45;cursor:not-allowed}
+.dd-onboard-error{color:#b33a3a;font-size:12px;margin-top:10px;min-height:18px}
+.dd-onboard-step{display:none}.dd-onboard-step.dd-active{display:block}
+@media(max-width:560px){.dd-onboard-shell{padding:16px 14px calc(18px + env(safe-area-inset-bottom))}.dd-onboard-top{margin-bottom:18px}.dd-onboard-brand{font-size:17px}.dd-onboard-mark{width:39px;height:39px}.dd-onboard-progress{margin-bottom:22px}.dd-onboard-intro{margin-bottom:18px}.dd-onboard-intro h2{font-size:29px}.dd-onboard-grid,.dd-onboard-options{grid-template-columns:1fr}.dd-onboard-panel{border-radius:20px;padding:15px}.dd-onboard-choice{min-height:60px;padding:12px}.dd-onboard-footer{align-items:stretch;flex-direction:column}.dd-onboard-privacy{max-width:none}.dd-onboard-actions{width:100%}.dd-onboard-actions button{flex:1}}
+@media(prefers-reduced-motion:reduce){.dd-onboard-progress span{transition:none}}
+</style>
+
+
+<style id="dietdost-food-photography-v1">
+/* Photo-led premium layer: decorative imagery only; no app logic or storage keys changed. */
+.dd-onboard-photo{height:142px;border-radius:22px;margin:-6px 0 23px;position:relative;overflow:hidden;background-size:cover;background-position:center;box-shadow:0 12px 28px rgba(27,67,43,.12);isolation:isolate}
+.dd-onboard-photo:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(13,54,37,.76),rgba(13,54,37,.28) 58%,rgba(13,54,37,.04));z-index:-1}
+.dd-onboard-photo:after{content:"Real food. Better everyday.";position:absolute;left:18px;bottom:16px;color:white;font-size:clamp(17px,3.5vw,23px);font-weight:850;letter-spacing:-.5px;text-shadow:0 2px 12px #0004}
+.dd-photo-personal{background-image:url('https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=1200&q=82')}
+.dd-photo-goal{background-image:url('https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=1200&q=82')}
+.dd-photo-food{background-image:url('https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=1200&q=82')}
+.dd-onboard-step[data-dd-step="0"] .dd-onboard-photo:after{content:"Your health journey starts here"}
+.dd-onboard-step[data-dd-step="1"] .dd-onboard-photo:after{content:"Your goals. Your routine. Your plan."}
+.dd-onboard-step[data-dd-step="2"] .dd-onboard-photo:after{content:"Made for the way you eat"}
+.dd-onboard-intro h2{letter-spacing:-1.25px}
+.dd-onboard-panel{box-shadow:0 14px 34px rgba(24,74,48,.065)}
+.dd-onboard-choice{overflow:hidden;isolation:isolate}
+.dd-onboard-choice:after{content:"";position:absolute;z-index:-1;right:0;top:0;bottom:0;width:36%;background-size:cover;background-position:center;opacity:.92;mask-image:linear-gradient(90deg,transparent,#000 36%);pointer-events:none}
+.dd-onboard-choice:has(input[value="lose"]):after{background-image:url('https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=360&q=75')}
+.dd-onboard-choice:has(input[value="gain"]):after{background-image:url('https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=360&q=75')}
+.dd-onboard-choice:has(input[value="maintain"]):after{background-image:url('https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=360&q=75')}
+.dd-onboard-choice:has(input[value="maintain_energy"]):after{background-image:url('https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=360&q=75')}
+.planner-meal-card{overflow:hidden;transition:transform .2s ease,box-shadow .2s ease}
+.planner-meal-card:hover{transform:translateY(-3px);box-shadow:0 16px 32px rgba(24,74,48,.11)}
+.planner-meal-top{position:relative;min-height:190px;display:flex;flex-direction:column;justify-content:flex-end;gap:5px;padding:18px;background-size:cover;background-position:center;border-radius:0;color:#fff;isolation:isolate}
+.planner-meal-top:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(12,36,24,.04) 0%,rgba(12,36,24,.20) 38%,rgba(12,36,24,.88) 100%);z-index:-1}
+.planner-meal-top span{align-self:flex-start;background:rgba(13,66,43,.75);color:#fff;border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:5px 9px;backdrop-filter:blur(6px)}
+.planner-meal-top h3{font-size:19px;line-height:1.2;max-width:26ch;text-shadow:0 2px 10px #0003}
+.planner-meal-card:nth-child(1) .planner-meal-top{background-image:url('https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=900&q=82')}
+.planner-meal-card:nth-child(2) .planner-meal-top{background-image:url('https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=900&q=82')}
+.planner-meal-card:nth-child(3) .planner-meal-top{background-image:url('https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=900&q=82')}
+.planner-meal-body{background:#fff}
+@media(max-width:760px){.dd-onboard-photo{height:116px;margin:-3px 0 18px;border-radius:18px}.planner-meal-top{min-height:170px}.planner-meal-card:hover{transform:none}}
+@media(max-width:420px){.dd-onboard-photo{height:104px}.dd-onboard-choice:after{width:28%;opacity:.72}.planner-meal-top{min-height:155px}}
+</style>
+
 </head>
 <body>
 <div class="app">
@@ -939,5 +1066,187 @@ document.getElementById('backupFile').addEventListener('change',e=>{restoreBacku
 /* Service worker registration and update prompts are handled by the DietDost update manager above. */
 </script>
 <script>document.addEventListener("click",e=>{const b=e.target.closest("[data-view-nutrition]");if(b&&typeof showFoodNutrition==="function")showFoodNutrition(b.dataset.viewNutrition)});</script>
+
+<div id="ddOnboarding" role="dialog" aria-modal="true" aria-labelledby="ddOnboardTitle">
+  <div class="dd-onboard-shell">
+    <div class="dd-onboard-top">
+      <div class="dd-onboard-brand"><span class="dd-onboard-mark">🥗</span><span>DietDost</span></div>
+      <span class="dd-onboard-stepcount" id="ddOnboardCount">STEP 1 OF 3</span>
+    </div>
+    <div class="dd-onboard-progress" aria-label="Setup progress"><span id="ddOnboardProgress"></span></div>
+    <form id="ddOnboardForm" novalidate>
+      <section class="dd-onboard-step dd-active" data-dd-step="0">
+        <div class="dd-onboard-photo dd-photo-personal" role="img" aria-label="Fresh balanced meal photography"></div>
+        <div class="dd-onboard-intro">
+          <div class="dd-onboard-eyebrow">LET'S PERSONALIZE YOUR EXPERIENCE</div>
+          <h2 id="ddOnboardTitle">First, tell us about yourself.</h2>
+          <p>These details help DietDost estimate nutrition targets that are more relevant to you. You can update them anytime.</p>
+        </div>
+        <div class="dd-onboard-panel">
+          <div class="dd-onboard-grid">
+            <div class="dd-onboard-field"><label for="ddName">What should we call you? (optional)</label><input id="ddName" maxlength="60" autocomplete="name" placeholder="Your name"></div>
+            <div class="dd-onboard-field"><label for="ddAge">Age (18–100)</label><input id="ddAge" type="number" min="18" max="100" required inputmode="numeric" placeholder="e.g. 28"></div>
+            <div class="dd-onboard-field"><label for="ddSex">Sex for nutrition estimate</label><select id="ddSex"><option value="male">Male</option><option value="female">Female</option><option value="other">Prefer not to specify / other</option></select></div>
+            <div class="dd-onboard-field"><label for="ddHeight">Height (cm)</label><input id="ddHeight" type="number" min="100" max="230" step="0.1" required inputmode="decimal" placeholder="e.g. 173"></div>
+            <div class="dd-onboard-field"><label for="ddWeight">Current weight (kg)</label><input id="ddWeight" type="number" min="25" max="300" step="0.1" required inputmode="decimal" placeholder="e.g. 61"></div>
+            <div class="dd-onboard-field"><label for="ddLanguage">Preferred language</label><select id="ddLanguage"><option value="en">English</option><option value="hi">हिन्दी</option><option value="ta">தமிழ்</option><option value="te">తెలుగు</option></select></div>
+          </div>
+          <div class="dd-onboard-error" id="ddOnboardError0" aria-live="polite"></div>
+        </div>
+      </section>
+      <section class="dd-onboard-step" data-dd-step="1">
+        <div class="dd-onboard-photo dd-photo-goal" role="img" aria-label="Fresh colourful food photography"></div>
+        <div class="dd-onboard-intro">
+          <div class="dd-onboard-eyebrow">YOUR GOALS, YOUR PACE</div>
+          <h2>What would you like to work on?</h2>
+          <p>Choose the main outcome you care about. DietDost will use it to shape your nutrition experience.</p>
+        </div>
+        <div class="dd-onboard-panel">
+          <div class="dd-onboard-options">
+            <label class="dd-onboard-choice"><input type="radio" name="ddGoal" value="lose"><span class="dd-choice-icon">⚖️</span><span><strong>Lose weight</strong><small>Build sustainable habits</small></span></label>
+            <label class="dd-onboard-choice"><input type="radio" name="ddGoal" value="gain"><span class="dd-choice-icon">💪</span><span><strong>Gain weight / muscle</strong><small>Support gradual progress</small></span></label>
+            <label class="dd-onboard-choice"><input type="radio" name="ddGoal" value="maintain" checked><span class="dd-choice-icon">🌿</span><span><strong>Improve overall health</strong><small>Build a balanced routine</small></span></label>
+            <label class="dd-onboard-choice"><input type="radio" name="ddGoal" value="maintain_energy"><span class="dd-choice-icon">⚡</span><span><strong>Support energy</strong><small>Understand daily food habits</small></span></label>
+          </div>
+          <div class="dd-onboard-grid" style="margin-top:16px">
+            <div class="dd-onboard-field"><label for="ddActivity">Typical activity level</label><select id="ddActivity"><option value="1.2">Mostly sitting / little exercise</option><option value="1.375">Light activity (1–3 days/week)</option><option value="1.55">Moderate activity (3–5 days/week)</option><option value="1.725">Very active (6–7 days/week)</option></select></div>
+            <div class="dd-onboard-field"><label for="ddExercise">Exercise routine</label><select id="ddExercise"><option value="none">Not currently</option><option value="1-2">1–2 days/week</option><option value="3-4">3–4 days/week</option><option value="5+">5+ days/week</option></select></div>
+          </div>
+          <div class="dd-onboard-error" id="ddOnboardError1" aria-live="polite"></div>
+        </div>
+      </section>
+      <section class="dd-onboard-step" data-dd-step="2">
+        <div class="dd-onboard-photo dd-photo-food" role="img" aria-label="Fresh everyday food photography"></div>
+        <div class="dd-onboard-intro">
+          <div class="dd-onboard-eyebrow">YOUR EVERYDAY FOOD</div>
+          <h2>Let's make it fit your routine.</h2>
+          <p>Tell us what works for you. These preferences are saved on this device and can be changed later.</p>
+        </div>
+        <div class="dd-onboard-panel">
+          <div class="dd-onboard-grid">
+            <div class="dd-onboard-field"><label for="ddDiet">Food preference</label><select id="ddDiet"><option value="veg">Vegetarian</option><option value="egg">Vegetarian + eggs</option><option value="nonveg">Non-vegetarian</option><option value="vegan">Vegan</option></select></div>
+            <div class="dd-onboard-field"><label for="ddMeals">Meals per day</label><select id="ddMeals"><option value="2">Usually 2 meals</option><option value="3" selected>Usually 3 meals</option><option value="4+">4 or more meals</option><option value="varies">It varies</option></select></div>
+            <div class="dd-onboard-field"><label for="ddBreakfast">First meal (optional)</label><input id="ddBreakfast" type="time" value="08:00"></div>
+            <div class="dd-onboard-field"><label for="ddDinner">Last meal (optional)</label><input id="ddDinner" type="time" value="20:00"></div>
+            <div class="dd-onboard-field"><label for="ddBudget">Approx. daily food budget</label><select id="ddBudget"><option value="100">Up to ₹100</option><option value="150" selected>₹100–₹150</option><option value="250">₹150–₹250</option><option value="400">₹250+</option><option value="na">No preference</option></select></div>
+            <div class="dd-onboard-field"><label for="ddAllergies">Allergies / foods to avoid (optional)</label><input id="ddAllergies" maxlength="240" placeholder="e.g. peanuts, lactose"></div>
+          </div>
+          <p class="note" style="margin:14px 0 0">DietDost uses approximate food data. Always check ingredient labels and avoid foods that trigger allergies.</p>
+          <div class="dd-onboard-error" id="ddOnboardError2" aria-live="polite"></div>
+        </div>
+      </section>
+      <div class="dd-onboard-footer">
+        <div class="dd-onboard-privacy">🔒 Your profile and preferences are saved locally in this browser. This setup does not create an online account.</div>
+        <div class="dd-onboard-actions"><button class="dd-onboard-btn dd-onboard-back" id="ddOnboardBack" type="button" hidden>Back</button><button class="dd-onboard-btn dd-onboard-next" id="ddOnboardNext" type="button">Continue →</button></div>
+      </div>
+    </form>
+  </div>
+</div>
+
+
+<script id="dietdost-first-run-onboarding">
+(function(){
+  const KEY='dietdost_preferences_v1';
+  const root=document.getElementById('ddOnboarding');
+  const form=document.getElementById('ddOnboardForm');
+  if(!root||!form)return;
+  const steps=[...root.querySelectorAll('[data-dd-step]')];
+  const next=document.getElementById('ddOnboardNext');
+  const back=document.getElementById('ddOnboardBack');
+  const count=document.getElementById('ddOnboardCount');
+  const progress=document.getElementById('ddOnboardProgress');
+  let index=0;
+  const $=id=>document.getElementById(id);
+  function setStep(n){
+    index=Math.max(0,Math.min(steps.length-1,n));
+    steps.forEach((el,i)=>el.classList.toggle('dd-active',i===index));
+    count.textContent=`STEP ${index+1} OF ${steps.length}`;
+    progress.style.width=`${((index+1)/steps.length)*100}%`;
+    back.hidden=index===0;
+    next.textContent=index===steps.length-1?'Create my plan ✓':'Continue →';
+    root.scrollTop=0;
+    const shell=root.querySelector('.dd-onboard-shell');if(shell)shell.scrollTop=0;
+  }
+  function error(msg){$('ddOnboardError'+index).textContent=msg||''}
+  function validate(){
+    error('');
+    if(index===0){
+      const age=+$('ddAge').value,h=+$('ddHeight').value,w=+$('ddWeight').value;
+      if(age<18||age>100||!Number.isFinite(age)){error('Please enter an age between 18 and 100.');$('ddAge').focus();return false}
+      if(h<100||h>230){error('Please enter a height between 100 and 230 cm.');$('ddHeight').focus();return false}
+      if(w<25||w>300){error('Please enter a weight between 25 and 300 kg.');$('ddWeight').focus();return false}
+    }
+    return true;
+  }
+  function open(){
+    // Existing profiles are not forced through onboarding again.
+    const saved=load('dietdost_profile_v1',null);
+    const done=localStorage.getItem('dietdost_onboarding_complete_v1')==='1';
+    const welcome=$('welcomeModal');if(welcome)welcome.classList.add('hidden');
+    if(!saved&&!done){
+      const prefs=load(KEY,{});
+      $('ddName').value=prefs.name||'';
+      $('ddAge').value=prefs.age||'';
+      $('ddSex').value=prefs.sex||'male';
+      $('ddHeight').value=prefs.height||'';
+      $('ddWeight').value=prefs.weight||'';
+      $('ddLanguage').value=load('dietdost_language','en');
+      $('ddActivity').value=prefs.activity||'1.2';
+      $('ddExercise').value=prefs.exercise||'none';
+      const goal=prefs.goalIntent||'maintain';
+      const goalRadio=form.querySelector(`input[name="ddGoal"][value="${goal}"]`)||form.querySelector('input[name="ddGoal"][value="maintain"]');
+      if(goalRadio)goalRadio.checked=true;
+      $('ddDiet').value=prefs.diet||'veg';$('ddMeals').value=prefs.meals||'3';
+      $('ddBreakfast').value=prefs.firstMeal||'08:00';$('ddDinner').value=prefs.lastMeal||'20:00';
+      $('ddBudget').value=prefs.budget||'150';$('ddAllergies').value=prefs.allergies||'';
+      root.classList.add('dd-open');document.body.style.overflow='hidden';setStep(0);
+    }
+  }
+  function finish(){
+    const goalIntent=form.querySelector('input[name="ddGoal"]:checked')?.value||'maintain';
+    const profileData={
+      name:$('ddName').value.trim(),age:+$('ddAge').value,sex:$('ddSex').value,
+      height:+$('ddHeight').value,weight:+$('ddWeight').value,
+      activity:+$('ddActivity').value,goal:goalIntent==='gain'?'gain':goalIntent==='lose'?'lose':'maintain'
+    };
+    const prefs={
+      name:profileData.name,age:profileData.age,sex:profileData.sex,height:profileData.height,weight:profileData.weight,
+      activity:profileData.activity,goal:profileData.goal,goalIntent,
+      exercise:$('ddExercise').value,diet:$('ddDiet').value,meals:$('ddMeals').value,
+      firstMeal:$('ddBreakfast').value,lastMeal:$('ddDinner').value,budget:$('ddBudget').value,
+      allergies:$('ddAllergies').value.trim(),updatedAt:new Date().toISOString()
+    };
+    try{
+      localStorage.setItem('dietdost_profile_v1',JSON.stringify(profileData));
+      localStorage.setItem(KEY,JSON.stringify(prefs));
+      localStorage.setItem('dietdost_language',$('ddLanguage').value);
+      localStorage.setItem('dietdost_onboarding_complete_v1','1');
+    }catch(e){error('Could not save your details. Please check available browser storage and try again.');return}
+    // Refresh the existing app's in-memory state without replacing its current data.
+    profile=profileData;language=$('ddLanguage').value;
+    const lang=$('language');if(lang)lang.value=language;
+    const plannerDiet=$('plannerDiet');
+    if(plannerDiet)plannerDiet.value=prefs.diet==='egg'?'egg':prefs.diet==='nonveg'?'nonveg':'veg';
+    const plannerBudget=$('plannerBudget');
+    if(plannerBudget)plannerBudget.value=({'100':'100','150':'150','250':'200','400':'300','na':'150'})[prefs.budget]||'150';
+    if(typeof renderMealPlan==='function')renderMealPlan();
+    const welcome=$('welcomeModal');if(welcome)welcome.classList.add('hidden');
+    root.classList.remove('dd-open');document.body.style.overflow='';
+    fillProfile();applyLanguage();updateDashboard();runReport();renderTargetSummary();showTab('dashboard');
+    if(typeof toast==='function')toast('Your DietDost profile is ready. Welcome aboard!');
+  }
+  next.addEventListener('click',()=>{
+    if(!validate())return;
+    if(index<steps.length-1){setStep(index+1);return}
+    finish();
+  });
+  back.addEventListener('click',()=>{error('');setStep(index-1)});
+  form.addEventListener('submit',e=>e.preventDefault());
+  document.addEventListener('keydown',e=>{if(root.classList.contains('dd-open')&&e.key==='Escape'){e.preventDefault();}});
+  // Start only after the original app has initialized its storage and controls.
+  open();
+})();
+</script>
+
 </body></html>
 
