@@ -1,7 +1,12 @@
-/* DietDost Service Worker v10: refresh shell for nutrition-label OCR and wellness updates. */
-const CACHE_NAME = "dietdost-shell-v10";
+/* DietDost Service Worker v11: refresh shell for nutrition-label OCR and wellness updates. */
+const CACHE_NAME = "dietdost-shell-v11";
 const APP_SHELL = ["./", "./index.html", "./manifest.json", "./icon.svg"];
 const PHOTO_ASSETS = [
+  "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=1400&q=85",
+  "https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=900&q=82",
+  "https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=900&q=82",
+  "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=900&q=82",
+  "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=900&q=82",
   "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=1200&q=82",
   "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=1200&q=82",
   "https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=1200&q=82",
