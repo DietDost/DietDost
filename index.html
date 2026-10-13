@@ -179,11 +179,51 @@ body{background:radial-gradient(ellipse at 12% 0%,#eaf8ef 0,transparent 31rem),v
 <div class="card span-12"><div class="card-head"><div><h3 data-i18n="mealLog">Meal log</h3><p class="sub" data-i18n="chooseDateSub">Choose a date to view or add food to that day.</p></div><div class="field" style="min-width:150px"><label for="diaryDate" data-i18n="date">Date</label><input type="date" id="diaryDate"></div></div><div id="diaryMeals" class="meal-list"></div></div></div></section>
 <section id="page-reports" class="page hidden"><h2 class="section-title" data-i18n="reports">Nutrition reports</h2><div class="card span-12" style="margin-bottom:16px"><div class="report-controls"><div class="field"><label for="reportRange" data-i18n="reportPeriod">Report period</label><select id="reportRange"><option value="day" data-i18n="oneDay">Single day</option><option value="week" selected data-i18n="last7">Last 7 days</option></select></div><div class="field"><label for="reportDate" data-i18n="endDate">Date / End date</label><input type="date" id="reportDate"></div><button id="runReport" class="btn btn-primary" data-i18n="generateReport">Generate report</button><button id="exportCsv" class="btn" data-i18n="exportCsv">Export CSV</button></div><div id="reportSummary"></div><div id="weeklyInsights" class="food-preview" style="margin-top:14px"><strong>Weekly insights</strong><p class="sub">Generate a report to see patterns from your diary.</p></div></div><div class="grid"><div class="card span-7"><div class="card-head"><div><h3 data-i18n="calorieTrend">Calorie trend</h3><p class="sub" data-i18n="calorieTrendSub">Daily calories compared with your estimated goal</p></div></div><div id="calorieChart" class="report-bars"></div></div><div class="card span-5"><div class="card-head"><div><h3 data-i18n="averageMacros">Average daily macros</h3><p class="sub" data-i18n="weeklyAverage">Average for the selected period</p></div></div><div id="reportMacros" class="micro-list"></div></div><div class="card span-12"><div class="card-head"><div><h3 data-i18n="reportDays">Daily breakdown</h3><p class="sub" data-i18n="reportDaysSub">Food entries saved in this browser</p></div></div><div id="reportTable"></div></div></div></section>
 <section id="page-profile" class="page hidden"><h2 class="section-title" data-i18n="nutritionProfile">Nutrition profile</h2><div class="grid"><div class="card span-7"><div class="card-head"><div><h3 data-i18n="personalDetails">Personal details</h3><p class="sub" data-i18n="personalDetailsSub">Used to estimate your daily energy and macro targets.</p></div></div><form id="profileForm"><div class="form-grid"><div class="field"><label for="pName" data-i18n="name">Name</label><input id="pName" maxlength="60" placeholder="Your name"></div><div class="field"><label for="pAge" data-i18n="age">Age</label><input id="pAge" type="number" min="18" max="100" required></div><div class="field"><label for="pSex" data-i18n="sexForEstimate">Sex (for estimate)</label><select id="pSex"><option value="male">Male</option><option value="female">Female</option><option value="other">Prefer not to specify / other</option></select></div><div class="field"><label for="pHeight" data-i18n="heightCm">Height (cm)</label><input id="pHeight" type="number" min="100" max="230" step="0.1" required></div><div class="field"><label for="pWeight" data-i18n="weightKg">Weight (kg)</label><input id="pWeight" type="number" min="25" max="300" step="0.1" required></div><div class="field"><label for="pActivity" data-i18n="activity">Activity level</label><select id="pActivity"><option value="1.2">Sedentary (little exercise)</option><option value="1.375">Lightly active (1–3 days/week)</option><option value="1.55">Moderately active (3–5 days/week)</option><option value="1.725">Very active (6–7 days/week)</option></select></div><div class="field"><label for="pGoal" data-i18n="goal">Goal</label><select id="pGoal"><option value="maintain">Maintain weight</option><option value="gain">Gain weight</option><option value="lose">Lose weight</option></select></div></div><div class="modal-actions"><button class="btn btn-primary" type="submit" data-i18n="saveProfile">Save profile & calculate targets</button></div></form></div><div class="card span-5"><div class="card-head"><div><h3 data-i18n="yourTargets">Your estimated targets</h3><p class="sub" data-i18n="targetsSub">Personalized starting point</p></div></div><div id="targetSummary"></div><p class="note" data-i18n="targetNote">These estimates are for general adult use and may not fit pregnancy, medical conditions, or clinician-prescribed diets. Consult a qualified professional if needed.</p><details class="target-method"><summary id="targetMethodSummary">How are targets estimated?</summary><p id="targetMethodText">Calories use an adult resting-energy equation, then an activity multiplier and a small goal adjustment. Protein, carbohydrate, fat and fiber targets are practical estimates—not individualized medical prescriptions. Micronutrient reference values vary by age, sex and life stage; the app does not diagnose deficiencies.</p></details></div></div>
+
+<div class="card span-5" id="profilePhotoCard">
+  <div class="card-head"><div><h3>Profile photo</h3><p class="sub">Add a photo to personalise your DietDost profile. It stays on this device.</p></div></div>
+  <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap">
+    <img id="profilePhotoPreview" alt="Your profile photo" src="" class="hidden" style="width:96px;height:96px;object-fit:cover;border-radius:50%;border:3px solid #d9eee0;background:#f4f8f5">
+    <div id="profilePhotoPlaceholder" style="width:96px;height:96px;border-radius:50%;display:grid;place-items:center;background:#e9f7ef;color:#137a52;font-size:38px;border:3px solid #d9eee0" aria-label="Default profile icon">👤</div>
+    <div style="flex:1;min-width:180px">
+      <div class="field"><label for="profilePhotoInput">Choose a photo</label><input id="profilePhotoInput" type="file" accept="image/*"></div>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:10px">
+        <button id="saveProfilePhoto" class="btn btn-primary" type="button">Save photo</button>
+        <button id="removeProfilePhoto" class="btn" type="button">Remove</button>
+      </div>
+    </div>
+  </div>
+  <p class="note" style="margin-top:12px">For privacy, the photo is saved only in this browser/app on this device. It is not uploaded to a server or synced to other devices. Use an image under 8 MB.</p>
+</div>
+
 <div class="card span-12" id="backupRestoreCard" style="margin-top:16px"><div class="card-head"><div><h3>Backup &amp; restore</h3><p class="sub">Download a copy of your food diary, nutrition profile and language settings, or restore them later on this browser.</p></div></div><div class="report-controls"><button id="downloadBackup" class="btn btn-primary" type="button">Download backup (JSON)</button><button id="chooseBackup" class="btn" type="button">Restore from backup</button><input id="backupFile" type="file" accept=".json,application/json" hidden></div><p class="note">Your backup file contains personal profile details and food logs. Keep it private. Restoring a backup replaces the current DietDost data in this browser; download a backup of your current data first if you want to keep it.</p><div id="backupStatus" class="sub" role="status" aria-live="polite"></div></div></section>
 </main><footer class="footer" data-i18n="footer">DietDost • Nutrition values are estimates; recipes, portion size and cooking oil can change results.<br><span>IFCT source list contains 528 food codes; only entries with all five core values are selectable. Available vitamins and minerals except Vitamin B12 are shown from selected Indian-source records; unavailable values are not estimated. Vitamin B12 is excluded because this source file does not provide it. Values are raw-food references unless noted. Reference: <a href="https://www.nin.res.in/ebooks/IFCT2017_16122024.pdf" target="_blank" rel="noopener noreferrer">ICMR–NIN Indian Food Composition Tables</a>.</span></footer>
 </div>
 <div id="welcomeModal" class="modal-backdrop hidden"><div class="modal"><div class="modal-head"><h2 data-i18n="welcome">Welcome to DietDost 👋</h2><button class="x" data-close="welcomeModal">×</button></div><p class="muted" data-i18n="welcomeSub">Choose your language and set up your nutrition profile to get started.</p><div class="field" style="margin:15px 0"><label for="welcomeLang" data-i18n="language">Language</label><select id="welcomeLang"><option value="en">English</option><option value="hi">हिन्दी</option><option value="ta">தமிழ்</option><option value="te">తెలుగు</option></select></div><button id="startSetup" class="btn btn-primary" data-i18n="getStarted">Get started</button></div></div>
-<div id="profileModal" class="modal-backdrop hidden"><div class="modal"><div class="modal-head"><h2 data-i18n="setProfile">Set up your profile</h2><button class="x" data-close="profileModal">×</button></div><p class="muted" data-i18n="profileModalSub">A few details help estimate your nutrition targets.</p><div id="profileModalFormSlot"></div></div></div><div id="toast" class="toast hidden"></div>
+<div id="profileModal" class="modal-backdrop hidden"><div class="modal"><div class="modal-head"><h2 data-i18n="setProfile">Set up your profile</h2><button class="x" data-close="profileModal">×</button></div><p class="muted" data-i18n="profileModalSub">A few details help estimate your nutrition targets.</p><div id="profileModalFormSlot"></div></div></div>
+<div id="dietdostUpdateNotice" class="dd-update-backdrop hidden" role="dialog" aria-modal="true" aria-labelledby="ddUpdateTitle">
+  <div class="dd-update-card">
+    <div class="dd-update-icon">↻</div>
+    <h2 id="ddUpdateTitle">New Update Available!</h2>
+    <p>A newer version of DietDost is ready. Update now to get the latest improvements.</p>
+    <div class="dd-update-actions">
+      <button type="button" id="ddUpdateLater" class="btn">Later</button>
+      <button type="button" id="ddUpdateNow" class="btn btn-primary">Update now</button>
+    </div>
+    <p id="ddUpdateStatus" class="note" aria-live="polite"></p>
+  </div>
+</div>
+<style>
+.dd-update-backdrop{position:fixed;inset:0;z-index:100000;background:rgba(8,28,18,.62);display:grid;place-items:center;padding:18px}
+.dd-update-backdrop.hidden{display:none!important}
+.dd-update-card{width:min(420px,100%);background:#fff;border:1px solid #dcebe1;border-radius:24px;padding:24px;box-shadow:0 25px 90px #0004;text-align:center}
+.dd-update-icon{width:58px;height:58px;margin:0 auto 12px;border-radius:18px;background:#e8f8ed;color:#137a52;display:grid;place-items:center;font-size:34px;font-weight:900}
+.dd-update-card h2{font-size:22px;margin:0 0 8px;color:#172820}.dd-update-card p{color:#66766d;line-height:1.55}
+.dd-update-actions{display:flex;gap:10px;justify-content:center;margin-top:18px}.dd-update-actions .btn{min-width:112px}
+@media(max-width:420px){.dd-update-card{padding:20px}.dd-update-actions{flex-direction:column-reverse}.dd-update-actions .btn{width:100%}}
+</style>
+
+<div id="toast" class="toast hidden"></div>
 <script>
 const STORE={logs:'dietdost_logs_v2',profile:'dietdost_profile_v1',language:'dietdost_language'};
 const foods=[
@@ -797,57 +837,96 @@ document.getElementById('chooseBackup').addEventListener('click',()=>document.ge
 document.getElementById('backupFile').addEventListener('change',e=>{restoreBackupFile(e.target.files&&e.target.files[0]);e.target.value=''});
 </script>
 
-<style id="dietdost-update-notice-css">
-#dietdostUpdateNotice{position:fixed;left:50%;bottom:18px;transform:translateX(-50%);width:min(520px,calc(100% - 24px));z-index:100000;background:#fff;border:1px solid #cfe8d8;border-radius:18px;box-shadow:0 16px 48px rgba(15,55,35,.22);padding:16px;color:#172820;display:none;gap:12px;align-items:center}
-#dietdostUpdateNotice[data-visible="true"]{display:flex}
-#dietdostUpdateNotice .dietdost-update-copy{flex:1;min-width:0}#dietdostUpdateNotice strong{display:block;font-size:15px;margin-bottom:3px}#dietdostUpdateNotice p{margin:0;font-size:12px;color:#66766d;line-height:1.45}#dietdostUpdateNow{border:0;border-radius:11px;padding:10px 13px;background:#137a52;color:#fff;font-weight:800;white-space:nowrap}#dietdostUpdateLater{border:0;background:transparent;color:#52665a;font-weight:700;padding:6px 2px;white-space:nowrap}@media(max-width:440px){#dietdostUpdateNotice{flex-wrap:wrap}#dietdostUpdateNotice .dietdost-update-copy{flex-basis:100%}#dietdostUpdateNotice .dietdost-update-actions{display:flex;justify-content:flex-end;gap:14px;width:100%}}
-</style>
-<div id="dietdostUpdateNotice" role="status" aria-live="polite">
-  <div class="dietdost-update-copy"><strong>🎉 New Update Available!</strong><p>A newer version of DietDost is ready. Update now to use the latest improvements.</p></div>
-  <div class="dietdost-update-actions"><button id="dietdostUpdateLater" type="button">Later</button><button id="dietdostUpdateNow" type="button">Update Now</button></div>
-</div>
+
 <script>
+/* DietDost profile photo: compressed and stored locally, without changing existing profile/log keys. */
 (function(){
-  if (!('serviceWorker' in navigator) || !(location.protocol === 'https:' || location.hostname === 'localhost' || location.hostname === '127.0.0.1')) return;
-  let registrationRef = null;
-  let userRequestedUpdate = false;
-  const notice = document.getElementById('dietdostUpdateNotice');
-  const updateNow = document.getElementById('dietdostUpdateNow');
-  const updateLater = document.getElementById('dietdostUpdateLater');
-  function showNotice(){ if (notice) notice.setAttribute('data-visible','true'); }
-  function hideNotice(){ if (notice) notice.removeAttribute('data-visible'); }
-  function watchInstallingWorker(worker){
-    if (!worker) return;
-    worker.addEventListener('statechange', function(){
-      if (worker.state === 'installed' && navigator.serviceWorker.controller) showNotice();
-    });
+  const PHOTO_KEY='dietdost_profile_photo_v1';
+  let pendingPhoto='';
+  const input=document.getElementById('profilePhotoInput');
+  const preview=document.getElementById('profilePhotoPreview');
+  const placeholder=document.getElementById('profilePhotoPlaceholder');
+  const saveBtn=document.getElementById('saveProfilePhoto');
+  const removeBtn=document.getElementById('removeProfilePhoto');
+  function renderPhoto(src){
+    if(src){preview.src=src;preview.classList.remove('hidden');placeholder.classList.add('hidden');}
+    else {preview.removeAttribute('src');preview.classList.add('hidden');placeholder.classList.remove('hidden');}
   }
-  window.addEventListener('load', async function(){
-    try {
-      registrationRef = await navigator.serviceWorker.register('./sw.js', { updateViaCache: 'none' });
-      if (registrationRef.waiting && navigator.serviceWorker.controller) showNotice();
-      // Force an update check after registration; the notice appears when a newer worker is waiting.
-      if (registrationRef.installing) watchInstallingWorker(registrationRef.installing);
-      registrationRef.addEventListener('updatefound', function(){ watchInstallingWorker(registrationRef.installing); });
-      // Check on launch and periodically while the app remains open.
-      const checkForUpdate = () => registrationRef && registrationRef.update().catch(()=>{});
-      checkForUpdate();
-      document.addEventListener('visibilitychange', function(){ if (document.visibilityState === 'visible') checkForUpdate(); });
-      window.setInterval(checkForUpdate, 60 * 60 * 1000);
-    } catch (err) { console.warn('DietDost service worker registration failed:', err); }
+  try{renderPhoto(localStorage.getItem(PHOTO_KEY)||'')}catch(e){renderPhoto('')}
+  input?.addEventListener('change',()=>{
+    const file=input.files&&input.files[0]; if(!file)return;
+    if(!file.type.startsWith('image/')){alert('Please choose an image file.');input.value='';return;}
+    if(file.size>8*1024*1024){alert('Please choose an image smaller than 8 MB.');input.value='';return;}
+    const reader=new FileReader();
+    reader.onload=()=>{
+      const image=new Image();
+      image.onload=()=>{
+        const maxSide=480,scale=Math.min(1,maxSide/Math.max(image.width,image.height));
+        const canvas=document.createElement('canvas');canvas.width=Math.max(1,Math.round(image.width*scale));canvas.height=Math.max(1,Math.round(image.height*scale));
+        const ctx=canvas.getContext('2d');ctx.drawImage(image,0,0,canvas.width,canvas.height);
+        pendingPhoto=canvas.toDataURL('image/jpeg',0.78);renderPhoto(pendingPhoto);
+      };
+      image.onerror=()=>alert('Could not read that image. Please choose another photo.');
+      image.src=String(reader.result);
+    };
+    reader.readAsDataURL(file);
   });
-  updateLater?.addEventListener('click', hideNotice);
-  updateNow?.addEventListener('click', function(){
-    if (!registrationRef || !registrationRef.waiting) { hideNotice(); registrationRef?.update().catch(()=>{}); return; }
-    userRequestedUpdate = true;
-    updateNow.disabled = true;
-    updateNow.textContent = 'Updating…';
-    registrationRef.waiting.postMessage({ type: 'SKIP_WAITING' });
+  saveBtn?.addEventListener('click',()=>{
+    if(!pendingPhoto){try{pendingPhoto=localStorage.getItem(PHOTO_KEY)||''}catch(e){}}
+    if(!pendingPhoto){alert('Please choose a photo first.');return;}
+    try{localStorage.setItem(PHOTO_KEY,pendingPhoto);renderPhoto(pendingPhoto);pendingPhoto='';if(input)input.value='';if(typeof toast==='function')toast('Profile photo saved on this device.');}
+    catch(e){alert('Could not save this photo. Try a smaller image or free some browser storage.');}
   });
-  navigator.serviceWorker.addEventListener('controllerchange', function(){
-    if (userRequestedUpdate) window.location.reload();
+  removeBtn?.addEventListener('click',()=>{
+    try{localStorage.removeItem(PHOTO_KEY)}catch(e){}
+    pendingPhoto='';if(input)input.value='';renderPhoto('');
+    if(typeof toast==='function')toast('Profile photo removed.');
   });
 })();
+</script>
+<script>
+/* Update prompt: show only when a newer Service Worker is installed and waiting. */
+(function(){
+  if(!('serviceWorker' in navigator))return;
+  const notice=document.getElementById('dietdostUpdateNotice');
+  const later=document.getElementById('ddUpdateLater');
+  const now=document.getElementById('ddUpdateNow');
+  const status=document.getElementById('ddUpdateStatus');
+  let registration=null, dismissed=false, updating=false;
+  function show(){if(!dismissed && notice)notice.classList.remove('hidden');}
+  function hide(){if(notice)notice.classList.add('hidden');}
+  function checkWaiting(){if(registration && registration.waiting && navigator.serviceWorker.controller)show();}
+  later?.addEventListener('click',()=>{dismissed=true;hide();});
+  now?.addEventListener('click',()=>{
+    if(!registration||!registration.waiting){if(status)status.textContent='Checking for the update…';registration?.update().catch(()=>{});return;}
+    updating=true;if(status)status.textContent='Updating DietDost…';
+    registration.waiting.postMessage({type:'SKIP_WAITING'});
+  });
+  navigator.serviceWorker.addEventListener('controllerchange',()=>{
+    if(updating){hide();window.location.reload();}
+  });
+  window.addEventListener('load',async()=>{
+    try{
+      registration=await navigator.serviceWorker.register('./sw.js',{updateViaCache:'none'});
+      await registration.update().catch(()=>{});
+      checkWaiting();
+      registration.addEventListener('updatefound',()=>{
+        const worker=registration.installing;if(!worker)return;
+        worker.addEventListener('statechange',()=>{
+          if(worker.state==='installed' && navigator.serviceWorker.controller && registration.waiting)show();
+        });
+      });
+      // If an update is already waiting, show the prompt.
+      checkWaiting();
+      // A small, low-frequency update check while the app remains open.
+      window.setInterval(()=>{if(navigator.onLine)registration.update().catch(()=>{});},5*60*1000);
+    }catch(e){console.warn('DietDost update check failed:',e);}
+  });
+})();
+</script>
+
+<script>
+/* Service worker registration and update prompts are handled by the DietDost update manager above. */
 </script>
 <script>document.addEventListener("click",e=>{const b=e.target.closest("[data-view-nutrition]");if(b&&typeof showFoodNutrition==="function")showFoodNutrition(b.dataset.viewNutrition)});</script>
 </body></html>
