@@ -799,7 +799,7 @@ document.getElementById('backupFile').addEventListener('change',e=>{restoreBacku
 
 <style id="dietdost-update-notice-css">
 #dietdostUpdateNotice{position:fixed;left:50%;bottom:18px;transform:translateX(-50%);width:min(520px,calc(100% - 24px));z-index:100000;background:#fff;border:1px solid #cfe8d8;border-radius:18px;box-shadow:0 16px 48px rgba(15,55,35,.22);padding:16px;color:#172820;display:none;gap:12px;align-items:center}
-#dietdostUpdateNotice[ data-visible="true"]{display:flex}
+#dietdostUpdateNotice[data-visible="true"]{display:flex}
 #dietdostUpdateNotice .dietdost-update-copy{flex:1;min-width:0}#dietdostUpdateNotice strong{display:block;font-size:15px;margin-bottom:3px}#dietdostUpdateNotice p{margin:0;font-size:12px;color:#66766d;line-height:1.45}#dietdostUpdateNow{border:0;border-radius:11px;padding:10px 13px;background:#137a52;color:#fff;font-weight:800;white-space:nowrap}#dietdostUpdateLater{border:0;background:transparent;color:#52665a;font-weight:700;padding:6px 2px;white-space:nowrap}@media(max-width:440px){#dietdostUpdateNotice{flex-wrap:wrap}#dietdostUpdateNotice .dietdost-update-copy{flex-basis:100%}#dietdostUpdateNotice .dietdost-update-actions{display:flex;justify-content:flex-end;gap:14px;width:100%}}
 </style>
 <div id="dietdostUpdateNotice" role="status" aria-live="polite">
@@ -826,6 +826,7 @@ document.getElementById('backupFile').addEventListener('change',e=>{restoreBacku
     try {
       registrationRef = await navigator.serviceWorker.register('./sw.js', { updateViaCache: 'none' });
       if (registrationRef.waiting && navigator.serviceWorker.controller) showNotice();
+      // Force an update check after registration; the notice appears when a newer worker is waiting.
       if (registrationRef.installing) watchInstallingWorker(registrationRef.installing);
       registrationRef.addEventListener('updatefound', function(){ watchInstallingWorker(registrationRef.installing); });
       // Check on launch and periodically while the app remains open.
