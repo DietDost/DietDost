@@ -799,7 +799,7 @@ document.getElementById('backupFile').addEventListener('change',e=>{restoreBacku
 
 <script>
 if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost' || location.hostname === '127.0.0.1')) {
-  window.addEventListener('load', () => navigator.serviceWorker.register('./sw.js').catch(err => console.warn('Offline support registration failed:', err)));
+  window.addEventListener('load', () => navigator.serviceWorker.register('./sw.js', { updateViaCache: 'none' }).catch(err => console.warn('Offline support registration failed:', err)));
 }
 </script>
 <script>document.addEventListener("click",e=>{const b=e.target.closest("[data-view-nutrition]");if(b&&typeof showFoodNutrition==="function")showFoodNutrition(b.dataset.viewNutrition)});</script>
