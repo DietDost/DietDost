@@ -1,5 +1,5 @@
-/* DietDost Service Worker v4: refresh the offline app shell so profile-photo code is available offline. */
-const CACHE_NAME = "dietdost-shell-v5";
+/* DietDost Service Worker v10: refresh shell for nutrition-label OCR and wellness updates. */
+const CACHE_NAME = "dietdost-shell-v10";
 const APP_SHELL = ["./", "./index.html", "./manifest.json", "./icon.svg"];
 const PHOTO_ASSETS = [
   "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=1200&q=82",
