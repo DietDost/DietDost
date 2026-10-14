@@ -1,19 +1,10 @@
 {
-  "name": "DietDost — Nutrition Companion",
+  "name": "DietDost \u2014 Nutrition Companion",
   "short_name": "DietDost",
-  "description": "Track meals, nutrition, water and food habits.",
-  "start_url": "./index.html",
+  "start_url": "./",
   "scope": "./",
   "display": "standalone",
-  "background_color": "#f6fbf8",
-  "theme_color": "#17845b",
-  "orientation": "portrait",
-  "icons": [
-    {
-      "src": "icon.svg",
-      "sizes": "any",
-      "type": "image/svg+xml",
-      "purpose": "any maskable"
-    }
-  ]
+  "background_color": "#f8f7ef",
+  "theme_color": "#153d2e",
+  "description": "Track meals, nutrition, and everyday food habits."
 }

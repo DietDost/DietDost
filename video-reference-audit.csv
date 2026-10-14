@@ -1,0 +1,12 @@
+﻿Area,Observed in uploaded video,DietDost status in this package,Notes
+Onboarding,"Goal, gender, weight, meal frequency, diet style, tailored-plan completion",Existing flow preserved; not rewritten in this pass,Verify on PC
+Home fasting status,Current fasting plan/status and start action,Existing Home fasting cards and Fasting tab preserved,Existing feature
+Daily Tasks,"Water, Weight, Calorie, Step tiles",Added to Home,Water opens tracker; Weight opens Me; Calories opens diary; Steps triggers +500
+Daily Insights,Image-led insight cards and See All,Added to Home with local Learn images,Tap card routes to Learn search
+Water tracker,"Amount, cup presets, daily target, reminders/settings",Existing water controls preserved,Full real-device reminder notification not verified
+Body data,"Current weight, target and Day/Week/Month chart",Existing Me weight trend and Add weight preserved,Existing feature
+Food diary,Calendar/day totals and manual add food,Existing Diary preserved,Existing feature
+Learn categories,"Beginner Guide, Benefits of Fasting, Weight Loss for Women, Common Issues of Fasting, Eating and Fasting, Fasting for Wellness, Advanced Fasting Tips, Tailored Plan",Existing 8-category / 48-guide Learn library preserved,Local image paths checked
+Article detail,"Image, full explanation, practical tips",Existing Learn article detail preserved,Content is DietDost-specific
+Home widget customization,"Widget gallery, theme colors and opacity",Not implemented in this pass,Not claiming full parity
+Premium paywall/ads,Subscription pricing/paywall and ad placements,Not implemented/reproduced from video,Preserve DietDost's own subscription decisions
