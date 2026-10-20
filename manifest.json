@@ -1,10 +1,25 @@
 {
-  "name": "DietDost \u2014 Nutrition Companion",
+  "name": "DietDost - 298 Unique Indian Foods",
   "short_name": "DietDost",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
-  "background_color": "#f8f7ef",
-  "theme_color": "#153d2e",
-  "description": "Track meals, nutrition, and everyday food habits."
+  "background_color": "#f7fbf8",
+  "theme_color": "#16834a",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "generatedBreakfastImages": [
+    {
+      "number": 3,
+      "food": "Kanda Poha",
+      "path": "images/generated-breakfast/03-kanda-poha.png",
+      "type": "AI-generated image"
+    }
+  ]
 }

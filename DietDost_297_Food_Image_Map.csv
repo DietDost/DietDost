@@ -1,0 +1,298 @@
+﻿S.No.,Category,Category item #,Food name,Image path
+1,Breakfast,1,Poha,images/generated-breakfast/03-kanda-poha.png
+2,Breakfast,2,Vegetable Upma,images/generated-breakfast/04-vegetable-upma.png
+3,Breakfast,3,Vegetable Dalia,images/indian-food-gallery/vegetable-dalia.svg
+4,Breakfast,4,Oats Porridge,images/indian-food-gallery/oats-porridge.svg
+5,Breakfast,5,Ragi Porridge,images/indian-food-gallery/ragi-porridge.svg
+6,Breakfast,6,Besan Chilla,images/indian-food-gallery/besan-chilla.svg
+7,Breakfast,7,Moong Dal Chilla,images/indian-food-gallery/moong-dal-chilla.svg
+8,Breakfast,8,Idli,images/generated-breakfast/01-idli.png
+9,Breakfast,9,Masala Dosa,images/generated-breakfast/02-masala-dosa.png
+10,Breakfast,10,Uttapam,images/indian-food-gallery/uttapam.svg
+11,Breakfast,11,Ven Pongal,images/generated-breakfast/05-pongal.png
+12,Breakfast,12,Medu Vada with Sambar,images/indian-food-gallery/medu-vada-with-sambar.svg
+13,Breakfast,13,Appam with Vegetable Stew,images/indian-food-gallery/appam-with-vegetable-stew.svg
+14,Breakfast,14,Puttu with Kadala Curry,images/indian-food-gallery/puttu-with-kadala-curry.svg
+15,Breakfast,15,Akki Roti,images/indian-food-gallery/akki-roti.svg
+16,Breakfast,16,Pesarattu,images/indian-food-gallery/pesarattu.svg
+17,Breakfast,17,Thalipeeth,images/indian-food-gallery/thalipeeth.svg
+18,Breakfast,18,Methi Thepla,images/indian-food-gallery/methi-thepla.svg
+19,Breakfast,19,Paratha with Curd,images/indian-food-gallery/paratha-with-curd.svg
+20,Breakfast,20,Gujarati Muthiya,images/indian-food-gallery/gujarati-muthiya.svg
+21,Breakfast,21,Sabudana Khichdi,images/indian-food-gallery/sabudana-khichdi.svg
+22,Breakfast,22,Chole Kulche,images/indian-food-gallery/chole-kulche.svg
+23,Breakfast,23,Usal Pav,images/indian-food-gallery/usal-pav.svg
+24,Breakfast,24,Khandvi,images/indian-food-gallery/khandvi.svg
+25,Breakfast,25,Handvo,images/indian-food-gallery/handvo.svg
+26,Breakfast,26,Sattu Drink and Roti,images/indian-food-gallery/sattu-drink-and-roti.svg
+27,Breakfast,27,Sprouts Chaat Breakfast Bowl,images/indian-food-gallery/sprouts-chaat-breakfast-bowl.svg
+28,Breakfast,28,Chana Chaat Breakfast Bowl,images/indian-food-gallery/chana-chaat-breakfast-bowl.svg
+29,Breakfast,29,Vegetable Sandwich,images/indian-food-gallery/vegetable-sandwich.svg
+30,Breakfast,30,Grilled Paneer Sandwich,images/indian-food-gallery/grilled-paneer-sandwich.svg
+31,Breakfast,31,Peanut Butter Banana Toast,images/indian-food-gallery/peanut-butter-banana-toast.svg
+32,Breakfast,32,Masala Omelette,images/indian-food-gallery/masala-omelette.svg
+33,Breakfast,33,Boiled Eggs with Toast,images/indian-food-gallery/boiled-eggs-with-toast.svg
+34,Breakfast,34,Egg Bhurji with Roti,images/indian-food-gallery/egg-bhurji-with-roti.svg
+35,Breakfast,35,Bread Omelette,images/indian-food-gallery/bread-omelette.svg
+36,Breakfast,36,Aloo Puri,images/indian-food-gallery/aloo-puri.svg
+37,Breakfast,37,Ragi Mudde Breakfast Bowl,images/indian-food-gallery/ragi-mudde-breakfast-bowl.svg
+38,Breakfast,38,Dhokla,images/indian-food-gallery/dhokla.svg
+39,Breakfast,39,Litti Chokha Breakfast,images/indian-food-gallery/litti-chokha-breakfast.svg
+40,Breakfast,40,Misal Pav,images/indian-food-gallery/misal-pav.svg
+41,Breakfast,41,Sattu Paratha,images/indian-food-gallery/sattu-paratha.svg
+42,Main Course,1,Roti with Dal,images/indian-food-gallery/roti-with-dal.svg
+43,Main Course,2,Roti with Seasonal Sabzi,images/indian-food-gallery/roti-with-seasonal-sabzi.svg
+44,Main Course,3,Roti with Paneer Curry,images/indian-food-gallery/roti-with-paneer-curry.svg
+45,Main Course,4,Roti with Chicken Curry,images/indian-food-gallery/roti-with-chicken-curry.svg
+46,Main Course,5,Roti with Egg Curry,images/indian-food-gallery/roti-with-egg-curry.svg
+47,Main Course,6,Makki ki Roti with Sarson Saag,images/indian-food-gallery/makki-ki-roti-with-sarson-saag.svg
+48,Main Course,7,Amritsari Kulcha with Chole,images/indian-food-gallery/amritsari-kulcha-with-chole.svg
+49,Main Course,8,Chana Masala with Bhatura,images/indian-food-gallery/chana-masala-with-bhatura.svg
+50,Main Course,9,Rajma Chawal,images/indian-food-gallery/rajma-chawal.svg
+51,Main Course,10,Chole Chawal,images/indian-food-gallery/chole-chawal.svg
+52,Main Course,11,Dal Chawal,images/indian-food-gallery/dal-chawal.svg
+53,Main Course,12,Kadhi Chawal,images/indian-food-gallery/kadhi-chawal.svg
+54,Main Course,13,Sambar Rice,images/indian-food-gallery/sambar-rice.svg
+55,Main Course,14,Curd Rice,images/indian-food-gallery/curd-rice.svg
+56,Main Course,15,Lemon Rice,images/indian-food-gallery/lemon-rice.svg
+57,Main Course,16,Vegetable Pulao,images/indian-food-gallery/vegetable-pulao.svg
+58,Main Course,17,Veg Biryani,images/indian-food-gallery/veg-biryani.svg
+59,Main Course,18,Chicken Biryani,images/indian-food-gallery/chicken-biryani.svg
+60,Main Course,19,Vegetable Khichdi,images/indian-food-gallery/vegetable-khichdi.svg
+61,Main Course,20,Bisi Bele Bath,images/indian-food-gallery/bisi-bele-bath.svg
+62,Main Course,21,Pav Bhaji,images/indian-food-gallery/pav-bhaji.svg
+63,Main Course,22,Dal Baati Churma,images/indian-food-gallery/dal-baati-churma.svg
+64,Main Course,23,Baingan Bharta with Roti,images/indian-food-gallery/baingan-bharta-with-roti.svg
+65,Main Course,24,Kala Chana with Roti,images/indian-food-gallery/kala-chana-with-roti.svg
+66,Main Course,25,Lobia Curry with Rice,images/indian-food-gallery/lobia-curry-with-rice.svg
+67,Main Course,26,Kerala Fish Curry with Red Rice,images/indian-food-gallery/kerala-fish-curry-with-red-rice.svg
+68,Main Course,27,Appam with Chicken Stew,images/indian-food-gallery/appam-with-chicken-stew.svg
+69,Main Course,28,Malabar Parotta with Egg Curry,images/indian-food-gallery/malabar-parotta-with-egg-curry.svg
+70,Main Course,29,Gujarati Undhiyu with Roti,images/indian-food-gallery/gujarati-undhiyu-with-roti.svg
+71,Main Course,30,Gujarati Dal Dhokli,images/indian-food-gallery/gujarati-dal-dhokli.svg
+72,Main Course,31,Sev Tamatar with Roti,images/indian-food-gallery/sev-tamatar-with-roti.svg
+73,Main Course,32,Bengali Fish Curry with Rice,images/indian-food-gallery/bengali-fish-curry-with-rice.svg
+74,Main Course,33,Shorshe Ilish with Rice,images/indian-food-gallery/shorshe-ilish-with-rice.svg
+75,Main Course,34,Goan Fish Curry with Rice,images/indian-food-gallery/goan-fish-curry-with-rice.svg
+76,Main Course,35,Chicken Chettinad with Rice,images/indian-food-gallery/chicken-chettinad-with-rice.svg
+77,Main Course,36,Aloo Paratha with Curd,images/indian-food-gallery/aloo-paratha-with-curd.svg
+78,Main Course,37,Chole Bhature,images/indian-food-gallery/chole-bhature.svg
+79,Main Course,38,Palak Dal with Rice,images/indian-food-gallery/palak-dal-with-rice.svg
+80,Main Course,39,Paneer Butter Masala with Jeera Rice,images/indian-food-gallery/paneer-butter-masala-with-jeera-rice.svg
+81,Main Course,40,Matar Paneer with Roti,images/indian-food-gallery/matar-paneer-with-roti.svg
+82,Main Course,41,Vegetable Hakka Noodles,images/indian-food-gallery/vegetable-hakka-noodles.svg
+83,Main Course,42,Chicken Fried Rice,images/indian-food-gallery/chicken-fried-rice.svg
+84,Main Course,43,Egg Fried Rice,images/indian-food-gallery/egg-fried-rice.svg
+85,Main Course,44,Fish Tikka with Rice,images/indian-food-gallery/fish-tikka-with-rice.svg
+86,Main Course,45,Mutton Rogan Josh with Rice,images/indian-food-gallery/mutton-rogan-josh-with-rice.svg
+87,Main Course,46,Prawn Masala with Rice,images/indian-food-gallery/prawn-masala-with-rice.svg
+88,Main Course,47,Hyderabadi Dum Biryani,images/indian-food-gallery/hyderabadi-dum-biryani.svg
+89,Main Course,48,Masoor Dal with Roti,images/indian-food-gallery/masoor-dal-with-roti.svg
+90,Main Course,49,Dal Tadka with Rice,images/indian-food-gallery/dal-tadka-with-rice.svg
+91,Main Course,50,Kadhi Pakora with Rice,images/indian-food-gallery/kadhi-pakora-with-rice.svg
+92,Main Course,51,Bajra Roti with Baingan Bharta,images/indian-food-gallery/bajra-roti-with-baingan-bharta.svg
+93,Main Course,52,Mushroom Masala with Roti,images/indian-food-gallery/mushroom-masala-with-roti.svg
+94,Main Course,53,Chana Saag with Roti,images/indian-food-gallery/chana-saag-with-roti.svg
+95,Main Course,54,Keema Matar with Roti,images/indian-food-gallery/keema-matar-with-roti.svg
+96,Main Course,55,Vegetable Jalfrezi with Rice,images/indian-food-gallery/vegetable-jalfrezi-with-rice.svg
+97,Salad,1,Kachumber Salad,images/indian-food-gallery/kachumber-salad.svg
+98,Salad,2,Sprouted Moong Salad,images/indian-food-gallery/sprouted-moong-salad.svg
+99,Salad,3,Mixed Sprouts Salad,images/indian-food-gallery/mixed-sprouts-salad.svg
+100,Salad,4,Black Chana Salad,images/indian-food-gallery/black-chana-salad.svg
+101,Salad,5,Kabuli Chana Salad,images/indian-food-gallery/kabuli-chana-salad.svg
+102,Salad,6,Sweet Corn Salad,images/indian-food-gallery/sweet-corn-salad.svg
+103,Salad,7,Paneer Salad,images/indian-food-gallery/paneer-salad.svg
+104,Salad,8,Tofu Salad,images/indian-food-gallery/tofu-salad.svg
+105,Salad,9,Rajma Salad,images/indian-food-gallery/rajma-salad.svg
+106,Salad,10,Lobia Salad,images/indian-food-gallery/lobia-salad.svg
+107,Salad,11,Mung Bean Sprout Kosambari,images/indian-food-gallery/mung-bean-sprout-kosambari.svg
+108,Salad,12,Carrot Cabbage Salad,images/indian-food-gallery/carrot-cabbage-salad.svg
+109,Salad,13,Beetroot Curd Salad,images/indian-food-gallery/beetroot-curd-salad.svg
+110,Salad,14,Fruit Chaat Salad,images/indian-food-gallery/fruit-chaat-salad.svg
+111,Salad,15,Watermelon Mint Salad,images/indian-food-gallery/watermelon-mint-salad.svg
+112,Salad,16,Raw Mango Salad,images/indian-food-gallery/raw-mango-salad.svg
+113,Salad,17,Palak Corn Salad,images/indian-food-gallery/palak-corn-salad.svg
+114,Salad,18,Quinoa Indian Salad,images/indian-food-gallery/quinoa-indian-salad.svg
+115,Salad,19,Chicken Tikka Salad,images/indian-food-gallery/chicken-tikka-salad.svg
+116,Salad,20,Boiled Egg Salad,images/indian-food-gallery/boiled-egg-salad.svg
+117,Salad,21,Tandoori Chicken Salad,images/indian-food-gallery/tandoori-chicken-salad.svg
+118,Salad,22,Prawn Cucumber Salad,images/indian-food-gallery/prawn-cucumber-salad.svg
+119,Salad,23,Mixed Seasonal Vegetable Salad,images/indian-food-gallery/mixed-seasonal-vegetable-salad.svg
+120,Soup,1,Tomato Soup,images/indian-food-gallery/tomato-soup.svg
+121,Soup,2,Palak Soup,images/indian-food-gallery/palak-soup.svg
+122,Soup,3,Mixed Vegetable Soup,images/indian-food-gallery/mixed-vegetable-soup.svg
+123,Soup,4,Sweet Corn Soup,images/indian-food-gallery/sweet-corn-soup.svg
+124,Soup,5,Moong Dal Soup,images/indian-food-gallery/moong-dal-soup.svg
+125,Soup,6,Masoor Dal Soup,images/indian-food-gallery/masoor-dal-soup.svg
+126,Soup,7,Carrot Ginger Soup,images/indian-food-gallery/carrot-ginger-soup.svg
+127,Soup,8,Pumpkin Soup,images/indian-food-gallery/pumpkin-soup.svg
+128,Soup,9,Mushroom Soup,images/indian-food-gallery/mushroom-soup.svg
+129,Soup,10,Mulligatawny Soup,images/indian-food-gallery/mulligatawny-soup.svg
+130,Soup,11,Rasam,images/indian-food-gallery/rasam.svg
+131,Soup,12,Drumstick Soup,images/indian-food-gallery/drumstick-soup.svg
+132,Soup,13,Lemon Coriander Soup,images/indian-food-gallery/lemon-coriander-soup.svg
+133,Soup,14,Vegetable Clear Soup,images/indian-food-gallery/vegetable-clear-soup.svg
+134,Soup,15,Manchow Soup,images/indian-food-gallery/manchow-soup.svg
+135,Soup,16,Beetroot Soup,images/indian-food-gallery/beetroot-soup.svg
+136,Soup,17,Cauliflower Soup,images/indian-food-gallery/cauliflower-soup.svg
+137,Soup,18,Millet Vegetable Soup,images/indian-food-gallery/millet-vegetable-soup.svg
+138,Soup,19,Chicken Clear Soup,images/indian-food-gallery/chicken-clear-soup.svg
+139,Soup,20,Chicken Shorba,images/indian-food-gallery/chicken-shorba.svg
+140,Soup,21,Mutton Shorba,images/indian-food-gallery/mutton-shorba.svg
+141,Soup,22,Fish Soup,images/indian-food-gallery/fish-soup.svg
+142,Soup,23,Prawn Soup,images/indian-food-gallery/prawn-soup.svg
+143,Soup,24,Chicken Mulligatawny,images/indian-food-gallery/chicken-mulligatawny.svg
+144,Soup,25,Keema Soup,images/indian-food-gallery/keema-soup.svg
+145,Smoothie,1,Banana Milk Smoothie,images/indian-food-gallery/banana-milk-smoothie.svg
+146,Smoothie,2,Mango Yogurt Smoothie,images/indian-food-gallery/mango-yogurt-smoothie.svg
+147,Smoothie,3,Chikoo Milk Smoothie,images/indian-food-gallery/chikoo-milk-smoothie.svg
+148,Smoothie,4,Papaya Banana Smoothie,images/indian-food-gallery/papaya-banana-smoothie.svg
+149,Smoothie,5,Mixed Fruit Smoothie,images/indian-food-gallery/mixed-fruit-smoothie.svg
+150,Smoothie,6,Banana Peanut Smoothie,images/indian-food-gallery/banana-peanut-smoothie.svg
+151,Smoothie,7,Banana Date Smoothie,images/indian-food-gallery/banana-date-smoothie.svg
+152,Smoothie,8,Coconut Mango Smoothie,images/indian-food-gallery/coconut-mango-smoothie.svg
+153,Smoothie,9,Pineapple Coconut Smoothie,images/indian-food-gallery/pineapple-coconut-smoothie.svg
+154,Smoothie,10,Guava Yogurt Smoothie,images/indian-food-gallery/guava-yogurt-smoothie.svg
+155,Smoothie,11,Apple Cinnamon Smoothie,images/indian-food-gallery/apple-cinnamon-smoothie.svg
+156,Smoothie,12,Pomegranate Banana Smoothie,images/indian-food-gallery/pomegranate-banana-smoothie.svg
+157,Smoothie,13,Watermelon Mint Smoothie,images/indian-food-gallery/watermelon-mint-smoothie.svg
+158,Smoothie,14,Muskmelon Smoothie,images/indian-food-gallery/muskmelon-smoothie.svg
+159,Smoothie,15,Avocado Banana Smoothie,images/indian-food-gallery/avocado-banana-smoothie.svg
+160,Smoothie,16,Spinach Banana Smoothie,images/indian-food-gallery/spinach-banana-smoothie.svg
+161,Smoothie,17,Carrot Orange Smoothie,images/indian-food-gallery/carrot-orange-smoothie.svg
+162,Smoothie,18,Dates Almond Smoothie,images/indian-food-gallery/dates-almond-smoothie.svg
+163,Smoothie,19,Kesar Pista Smoothie,images/indian-food-gallery/kesar-pista-smoothie.svg
+164,Smoothie,20,Sattu Banana Smoothie,images/indian-food-gallery/sattu-banana-smoothie.svg
+165,Smoothie,21,Ragi Banana Smoothie,images/indian-food-gallery/ragi-banana-smoothie.svg
+166,Smoothie,22,Peanut Chikki Smoothie,images/indian-food-gallery/peanut-chikki-smoothie.svg
+167,Smoothie,23,Cocoa Banana Smoothie,images/indian-food-gallery/cocoa-banana-smoothie.svg
+168,Smoothie,24,Coffee Banana Smoothie,images/indian-food-gallery/coffee-banana-smoothie.svg
+169,Smoothie,25,Mango Chia Smoothie,images/indian-food-gallery/mango-chia-smoothie.svg
+170,Smoothie,26,Jamun Smoothie,images/indian-food-gallery/jamun-smoothie.svg
+171,Smoothie,27,Custard Apple Smoothie,images/indian-food-gallery/custard-apple-smoothie.svg
+172,Smoothie,28,Litchi Smoothie,images/indian-food-gallery/litchi-smoothie.svg
+173,Smoothie,29,Tender Coconut Smoothie,images/indian-food-gallery/tender-coconut-smoothie.svg
+174,Smoothie,30,Jackfruit Smoothie,images/indian-food-gallery/jackfruit-smoothie.svg
+175,Side Dish,1,Palak Sabzi,images/indian-food-gallery/palak-sabzi.svg
+176,Side Dish,2,Methi Aloo,images/indian-food-gallery/methi-aloo.svg
+177,Side Dish,3,Sarson ka Saag,images/indian-food-gallery/sarson-ka-saag.svg
+178,Side Dish,4,Lauki Sabzi,images/indian-food-gallery/lauki-sabzi.svg
+179,Side Dish,5,Bhindi Masala,images/indian-food-gallery/bhindi-masala.svg
+180,Side Dish,6,Aloo Gobi,images/indian-food-gallery/aloo-gobi.svg
+181,Side Dish,7,Baingan Bharta,images/indian-food-gallery/baingan-bharta.svg
+182,Side Dish,8,Mix Veg Sabzi,images/indian-food-gallery/mix-veg-sabzi.svg
+183,Side Dish,9,Karela Sabzi,images/indian-food-gallery/karela-sabzi.svg
+184,Side Dish,10,Pumpkin Sabzi,images/indian-food-gallery/pumpkin-sabzi.svg
+185,Side Dish,11,Green Peas Masala,images/indian-food-gallery/green-peas-masala.svg
+186,Side Dish,12,Capsicum Besan Sabzi,images/indian-food-gallery/capsicum-besan-sabzi.svg
+187,Side Dish,13,Matar Paneer,images/indian-food-gallery/matar-paneer.svg
+188,Side Dish,14,Paneer Bhurji,images/indian-food-gallery/paneer-bhurji.svg
+189,Side Dish,15,Kadai Paneer,images/indian-food-gallery/kadai-paneer.svg
+190,Side Dish,16,Shahi Paneer,images/indian-food-gallery/shahi-paneer.svg
+191,Side Dish,17,Tofu Bhurji,images/indian-food-gallery/tofu-bhurji.svg
+192,Side Dish,18,Soya Keema,images/indian-food-gallery/soya-keema.svg
+193,Side Dish,19,Dal Tadka Side,images/indian-food-gallery/dal-tadka-side.svg
+194,Side Dish,20,Kadhi Pakora,images/indian-food-gallery/kadhi-pakora.svg
+195,Side Dish,21,Boondi Raita,images/indian-food-gallery/boondi-raita.svg
+196,Side Dish,22,Cucumber Raita,images/indian-food-gallery/cucumber-raita.svg
+197,Side Dish,23,Mint Chutney,images/indian-food-gallery/mint-chutney.svg
+198,Side Dish,24,Coriander Chutney,images/indian-food-gallery/coriander-chutney.svg
+199,Side Dish,25,Tomato Chutney,images/indian-food-gallery/tomato-chutney.svg
+200,Side Dish,26,Coconut Chutney,images/indian-food-gallery/coconut-chutney.svg
+201,Side Dish,27,Peanut Chutney,images/indian-food-gallery/peanut-chutney.svg
+202,Side Dish,28,Garlic Chutney,images/indian-food-gallery/garlic-chutney.svg
+203,Side Dish,29,Papad,images/indian-food-gallery/papad.svg
+204,Snacks,1,Samosa,images/indian-food-gallery/samosa.svg
+205,Snacks,2,Kachori,images/indian-food-gallery/kachori.svg
+206,Snacks,3,Roasted Makhana,images/indian-food-gallery/roasted-makhana.svg
+207,Snacks,4,Roasted Chana,images/indian-food-gallery/roasted-chana.svg
+208,Snacks,5,Masala Peanuts,images/indian-food-gallery/masala-peanuts.svg
+209,Snacks,6,Chana Chaat,images/indian-food-gallery/chana-chaat.svg
+210,Snacks,7,Bhel Puri,images/indian-food-gallery/bhel-puri.svg
+211,Snacks,8,Pani Puri,images/indian-food-gallery/pani-puri.svg
+212,Snacks,9,Sev Puri,images/indian-food-gallery/sev-puri.svg
+213,Snacks,10,Aloo Tikki,images/indian-food-gallery/aloo-tikki.svg
+214,Snacks,11,Dahi Bhalla,images/indian-food-gallery/dahi-bhalla.jpg
+215,Snacks,12,Vada Pav,images/indian-food-gallery/vada-pav.svg
+216,Snacks,13,Paneer Tikka,images/indian-food-gallery/paneer-tikka.svg
+217,Snacks,14,Chicken Tikka,images/indian-food-gallery/chicken-tikka.svg
+218,Snacks,15,Veg Momos,images/indian-food-gallery/veg-momos.svg
+219,Snacks,16,Chicken Momos,images/indian-food-gallery/chicken-momos.svg
+220,Snacks,17,Veg Chow Mein,images/indian-food-gallery/veg-chow-mein.svg
+221,Snacks,18,Bread Pakora,images/indian-food-gallery/bread-pakora.svg
+222,Snacks,19,Onion Pakora,images/indian-food-gallery/onion-pakora.svg
+223,Snacks,20,Mirchi Bajji,images/indian-food-gallery/mirchi-bajji.svg
+224,Snacks,21,Corn Chaat,images/indian-food-gallery/corn-chaat.svg
+225,Snacks,22,Roasted Sweet Potato,images/indian-food-gallery/roasted-sweet-potato.svg
+226,Snacks,23,Khakhra,images/indian-food-gallery/khakhra.svg
+227,Snacks,24,Mathri,images/indian-food-gallery/mathri.svg
+228,Snacks,25,Murukku,images/indian-food-gallery/murukku.svg
+229,Snacks,26,Banana Chips,images/indian-food-gallery/banana-chips.svg
+230,Snacks,27,Namkeen Mixture,images/indian-food-gallery/namkeen-mixture.svg
+231,Snacks,28,Peanut Sundal,images/indian-food-gallery/peanut-sundal.svg
+232,Snacks,29,Chicken Pakora,images/indian-food-gallery/chicken-pakora.svg
+233,Snacks,30,Fish Pakora,images/indian-food-gallery/fish-pakora.svg
+234,Snacks,31,Prawn Koliwada,images/indian-food-gallery/prawn-koliwada.svg
+235,Snacks,32,Veg Cutlet,images/indian-food-gallery/veg-cutlet.svg
+236,Snacks,33,Mysore Bonda,images/indian-food-gallery/mysore-bonda.svg
+237,Snacks,34,Punugulu,images/indian-food-gallery/punugulu.svg
+238,Dessert,1,Kheer,images/indian-food-gallery/kheer.svg
+239,Dessert,2,Gajar Halwa,images/indian-food-gallery/gajar-halwa.svg
+240,Dessert,3,Gulab Jamun,images/indian-food-gallery/gulab-jamun.svg
+241,Dessert,4,Rasgulla,images/indian-food-gallery/rasgulla.svg
+242,Dessert,5,Jalebi,images/indian-food-gallery/jalebi.svg
+243,Dessert,6,Shrikhand,images/indian-food-gallery/shrikhand.svg
+244,Dessert,7,Phirni,images/indian-food-gallery/phirni.svg
+245,Dessert,8,Besan Ladoo,images/indian-food-gallery/besan-ladoo.svg
+246,Dessert,9,Moong Dal Halwa,images/indian-food-gallery/moong-dal-halwa.svg
+247,Dessert,10,Coconut Ladoo,images/indian-food-gallery/coconut-ladoo.svg
+248,Dessert,11,Kulfi,images/indian-food-gallery/kulfi.svg
+249,Dessert,12,Fruit Custard,images/indian-food-gallery/fruit-custard.svg
+250,Dessert,13,Rasmalai,images/indian-food-gallery/rasmalai.svg
+251,Dessert,14,Sandesh,images/indian-food-gallery/sandesh.svg
+252,Dessert,15,Malpua,images/indian-food-gallery/malpua.svg
+253,Dessert,16,Rabri,images/indian-food-gallery/rabri.svg
+254,Dessert,17,Mysore Pak,images/indian-food-gallery/mysore-pak.svg
+255,Dessert,18,Puran Poli,images/indian-food-gallery/puran-poli.svg
+256,Dessert,19,Modak,images/indian-food-gallery/modak.svg
+257,Dessert,20,Ada Pradhaman,images/indian-food-gallery/ada-pradhaman.svg
+258,Dessert,21,Lapsi,images/indian-food-gallery/lapsi.svg
+259,Dessert,22,Ghevar,images/indian-food-gallery/ghevar.svg
+260,Dessert,23,Thekua,images/indian-food-gallery/thekua.svg
+261,Dessert,24,Petha,images/indian-food-gallery/petha.svg
+262,Dessert,25,Kalakand,images/indian-food-gallery/kalakand.svg
+263,Dessert,26,Kaju Katli,images/indian-food-gallery/kaju-katli.svg
+264,Dessert,27,Til Ladoo,images/indian-food-gallery/til-ladoo.svg
+265,Dessert,28,Makhana Kheer,images/indian-food-gallery/makhana-kheer.svg
+266,Dessert,29,Mishti Doi,images/indian-food-gallery/mishti-doi.svg
+267,Dessert,30,Basundi,images/indian-food-gallery/basundi.svg
+268,Dessert,31,Shahi Tukda,images/indian-food-gallery/shahi-tukda.svg
+269,Beverage,1,Masala Chai,images/indian-food-gallery/masala-chai.svg
+270,Beverage,2,Green Tea,images/indian-food-gallery/green-tea.svg
+271,Beverage,3,Filter Coffee,images/indian-food-gallery/filter-coffee.svg
+272,Beverage,4,Cold Coffee,images/indian-food-gallery/cold-coffee.svg
+273,Beverage,5,Turmeric Milk,images/indian-food-gallery/turmeric-milk.svg
+274,Beverage,6,Badam Milk,images/indian-food-gallery/badam-milk.svg
+275,Beverage,7,Chaas,images/indian-food-gallery/chaas.svg
+276,Beverage,8,Sweet Lassi,images/indian-food-gallery/sweet-lassi.svg
+277,Beverage,9,Nimbu Pani,images/indian-food-gallery/nimbu-pani.svg
+278,Beverage,10,Jaljeera,images/indian-food-gallery/jaljeera.svg
+279,Beverage,11,Aam Panna,images/indian-food-gallery/aam-panna.svg
+280,Beverage,12,Sattu Drink,images/indian-food-gallery/sattu-drink.svg
+281,Beverage,13,Coconut Water,images/indian-food-gallery/coconut-water.svg
+282,Beverage,14,Sugarcane Juice,images/indian-food-gallery/sugarcane-juice.svg
+283,Beverage,15,Fresh Orange Juice,images/indian-food-gallery/fresh-orange-juice.svg
+284,Beverage,16,Mosambi Juice,images/indian-food-gallery/mosambi-juice.svg
+285,Beverage,17,Watermelon Juice,images/indian-food-gallery/watermelon-juice.svg
+286,Beverage,18,Pomegranate Juice,images/indian-food-gallery/pomegranate-juice.svg
+287,Beverage,19,Carrot Beet Juice,images/indian-food-gallery/carrot-beet-juice.svg
+288,Beverage,20,Amla Juice,images/indian-food-gallery/amla-juice.svg
+289,Beverage,21,Kokum Sharbat,images/indian-food-gallery/kokum-sharbat.svg
+290,Beverage,22,Bel Sharbat,images/indian-food-gallery/bel-sharbat.svg
+291,Beverage,23,Thandai,images/indian-food-gallery/thandai.svg
+292,Beverage,24,Sol Kadhi,images/indian-food-gallery/sol-kadhi.svg
+293,Beverage,25,Kashmiri Kahwa,images/indian-food-gallery/kashmiri-kahwa.svg
+294,Beverage,26,Kashmiri Noon Chai,images/indian-food-gallery/kashmiri-noon-chai.svg
+295,Beverage,27,Panakam,images/indian-food-gallery/panakam.svg
+296,Beverage,28,Neer Mor,images/indian-food-gallery/neer-mor.svg
+297,Beverage,29,Kanji (Fermented Drink),images/indian-food-gallery/kanji-fermented-drink.svg

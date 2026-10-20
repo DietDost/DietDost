@@ -1,0 +1,10 @@
+Confirmed food image mappings included in this cumulative update:
+Aloo Paratha: images/indian-food-gallery/aloo-paratha-photorealistic.png
+Chole Bhature: images/indian-food-gallery/chole-bhature.jpg
+Vada Pav: images/indian-food-gallery/vada-pav.png
+Pav Bhaji: images/indian-food-gallery/pav-bhaji.jpg
+Bhel Puri: images/indian-food-gallery/bhel-puri.jpg
+Chana Chaat: images/indian-food-gallery/chana-chaat.jpg
+Masala Peanuts: images/indian-food-gallery/masala-peanuts.jpg
+
+Note: other generated food pictures were not mapped unless their dish identity and project asset could be verified.
