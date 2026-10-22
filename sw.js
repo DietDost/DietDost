@@ -1,4 +1,4 @@
-const CACHE_NAME = 'dietdost-static-catalog303';
+const CACHE_NAME = 'dietdost-static-catalog307';
 const APP_SHELL = ['./index.html', './manifest.json', './icon.svg'];
 
 self.addEventListener('install', event => {

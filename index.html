@@ -182,6 +182,17 @@ img,svg,canvas{max-width:100%;}
 .dd-feature-list .dd-reference-card h4{font-size:12px}
 .dd-feature-list .dd-reference-card p{font-size:10px}
 @media(min-width:620px){.dd-recipe-spotlight-card{flex-basis:48%}.dd-feature-list{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* DietDost recipe cards: uniform image tiles and name-only captions (Go Fasting-inspired) */
+.dd-reference-card,.dd-zip-reference-card{display:flex!important;flex-direction:column!important;align-items:stretch!important;min-width:0!important;}
+.dd-reference-card{flex:0 0 31%!important;}
+.dd-reference-card>img,.dd-zip-reference-card>img{display:block!important;width:100%!important;height:180px!important;min-height:180px!important;max-height:180px!important;aspect-ratio:1/1!important;object-fit:cover!important;flex:0 0 180px!important;border-radius:12px 12px 0 0!important;}
+.dd-reference-card .dd-reference-card-copy,.dd-zip-reference-card .dd-reference-card-copy{display:block!important;width:100%!important;min-width:0!important;box-sizing:border-box!important;padding:10px 11px 12px!important;}
+.dd-reference-card h4,.dd-zip-reference-card h4,.dd-reference-card .dd-reference-card-copy h4,.dd-zip-reference-card .dd-reference-card-copy h4{display:block!important;writing-mode:horizontal-tb!important;white-space:normal!important;overflow-wrap:break-word!important;word-break:normal!important;hyphens:auto!important;font-size:15px!important;line-height:1.3!important;margin:0!important;color:#17253a!important;}
+.dd-reference-card .dd-reference-card-copy p,.dd-zip-recipe-meta{display:none!important;}
+.dd-zip-pro-badge{top:12px!important;left:auto!important;right:12px!important;}
+@media(max-width:520px){.dd-reference-card>img,.dd-zip-reference-card>img{height:120px!important;min-height:120px!important;max-height:120px!important;flex-basis:120px!important;}.dd-reference-card h4,.dd-zip-reference-card h4{font-size:13px!important;}}
+
 </style>
 
 <style>
@@ -690,6 +701,200 @@ body{background:var(--dd-cream);color:var(--dd-navy)}
 }
 </style>
 
+
+<style id="dietdost-uniform-recipe-image-size-v1">
+/* Uniform image frame for every recipe card; crop consistently without stretching. */
+.dd-reference-strip .dd-reference-card > img,
+.dd-recipe-all-grid .dd-reference-card > img,
+.dd-recipe-grid .dd-recipe-card > img,
+.dd-recipe-grid .dd-recipe-card .dd-recipe-photo,
+#dd490Grid .dd490-food-card .dd490-food-photo,
+.dd490-food-grid .dd490-food-card .dd490-food-photo {
+  display:block !important; width:100% !important; height:180px !important; min-height:180px !important; max-height:180px !important;
+  aspect-ratio:4 / 3 !important; box-sizing:border-box !important; overflow:hidden !important;
+}
+.dd-reference-strip .dd-reference-card > img,
+.dd-recipe-all-grid .dd-reference-card > img,
+.dd-recipe-grid .dd-recipe-card > img,
+#dd490Grid .dd490-food-card .dd490-food-photo > img,
+.dd490-food-grid .dd490-food-card .dd490-food-photo > img {
+  object-fit:cover !important; object-position:center !important;
+}
+#dd490Grid .dd490-food-card .dd490-food-photo > img,
+.dd490-food-grid .dd490-food-card .dd490-food-photo > img {width:100% !important;height:100% !important;min-height:0 !important;max-height:none !important;}
+.dd-reference-strip .dd-reference-card, .dd-recipe-all-grid .dd-reference-card, .dd-recipe-grid .dd-recipe-card, #dd490Grid .dd490-food-card {min-width:0 !important;overflow:hidden !important;}
+@media(max-width:520px){
+ .dd-reference-strip .dd-reference-card > img, .dd-recipe-all-grid .dd-reference-card > img, .dd-recipe-grid .dd-recipe-card > img, .dd-recipe-grid .dd-recipe-card .dd-recipe-photo, #dd490Grid .dd490-food-card .dd490-food-photo, .dd490-food-grid .dd490-food-card .dd490-food-photo {height:120px !important;min-height:120px !important;max-height:120px !important;}
+}
+</style>
+
+<style id="dietdost-recipe-card-layout-final">
+/* DietDost recipe cards: consistent Go-Fasting-inspired vertical layout */
+.dd-reference-strip > .dd-reference-card,
+.dd-reference-card { display:flex !important; flex-direction:column !important; align-items:stretch !important; width:auto !important; min-width:0 !important; }
+.dd-reference-card > img,
+.dd-reference-card > picture,
+.dd-reference-card .dd-reference-card-image,
+.dd-recipe-card .dd-recipe-photo,
+.dd-recipe-card > img,
+.dd490-food-card .dd490-food-photo { display:block !important; width:100% !important; height:180px !important; min-height:180px !important; max-height:180px !important; flex:0 0 180px !important; aspect-ratio:auto !important; object-fit:cover !important; overflow:hidden !important; }
+.dd-reference-card .dd-reference-card-copy,
+.dd-reference-card > div:not(img),
+.dd-recipe-card .dd-recipe-body,
+.dd490-food-card .dd490-food-info { display:flex; flex-direction:column; width:100%; min-width:0; box-sizing:border-box; }
+.dd-reference-card h4, .dd-reference-card .dd-reference-card-copy h4,
+.dd-recipe-card .dd-recipe-body h3, .dd490-food-card .dd490-food-info strong { display:block !important; width:100% !important; writing-mode:horizontal-tb !important; text-orientation:mixed !important; white-space:normal !important; overflow-wrap:break-word !important; word-break:normal !important; hyphens:auto; }
+.dd-reference-strip { align-items:stretch !important; }
+.dd-reference-card { flex:0 0 31% !important; }
+@media (max-width:600px) {
+ .dd-reference-card { flex-basis:44% !important; }
+ .dd-reference-card > img, .dd-reference-card > picture, .dd-reference-card .dd-reference-card-image, .dd-recipe-card .dd-recipe-photo, .dd-recipe-card > img, .dd490-food-card .dd490-food-photo { height:130px !important; min-height:130px !important; max-height:130px !important; flex-basis:130px !important; }
+}
+</style>
+
+<style id="dietdost-final-equal-recipe-image-frames-v2">
+/* FINAL: every recipe listing uses the same image frame dimensions. */
+.dd-reference-strip .dd-reference-card img,
+.dd-recipe-all-grid .dd-reference-card img,
+.dd-recipe-grid .dd-recipe-card img,
+.dd490-food-grid .dd490-food-card img,
+#dd490Grid .dd490-food-card img,
+.dd-food-tile img {
+  display:block !important;
+  width:100% !important;
+  height:270px !important;
+  min-height:270px !important;
+  max-height:270px !important;
+  aspect-ratio:auto !important;
+  object-fit:cover !important;
+  object-position:center center !important;
+  box-sizing:border-box !important;
+}
+@media (max-width: 620px) {
+  .dd-reference-strip .dd-reference-card img,
+  .dd-recipe-all-grid .dd-reference-card img,
+  .dd-recipe-grid .dd-recipe-card img,
+  .dd490-food-grid .dd490-food-card img,
+  #dd490Grid .dd490-food-card img,
+  .dd-food-tile img {
+    height:180px !important; min-height:180px !important; max-height:180px !important;
+  }
+}
+</style>
+
+
+<style id="dietdost-mobile-first-recipe-cards-v2">
+/* Mobile-first recipe card layout: equal image frames, name only below image. */
+.dd-reference-strip { align-items:stretch !important; }
+.dd-reference-card { display:flex !important; flex-direction:column !important; align-items:stretch !important; writing-mode:horizontal-tb !important; min-width:0 !important; }
+.dd-reference-card > img, .dd-reference-card img { display:block !important; width:100% !important; height:160px !important; min-height:160px !important; max-height:160px !important; aspect-ratio:auto !important; object-fit:cover !important; flex:0 0 160px !important; }
+.dd-reference-card .dd-reference-card-copy { display:block !important; width:100% !important; min-width:0 !important; box-sizing:border-box !important; padding:9px 10px 12px !important; }
+.dd-reference-card .dd-reference-card-copy h4 { display:-webkit-box !important; -webkit-box-orient:vertical !important; -webkit-line-clamp:2 !important; overflow:hidden !important; white-space:normal !important; overflow-wrap:break-word !important; word-break:normal !important; writing-mode:horizontal-tb !important; font-size:14px !important; line-height:1.3 !important; margin:0 !important; min-height:0 !important; }
+.dd-reference-card .dd-reference-card-copy p { display:none !important; }
+.dd-recipe-all-grid { grid-template-columns:repeat(2,minmax(0,1fr)) !important; align-items:stretch !important; }
+.dd-recipe-all-grid .dd-reference-card { width:100% !important; min-width:0 !important; }
+.dd-recipe-all-grid .dd-reference-card > img, .dd-recipe-all-grid .dd-reference-card img { height:160px !important; min-height:160px !important; max-height:160px !important; aspect-ratio:auto !important; flex-basis:160px !important; }
+.dd490-food-card { display:flex !important; flex-direction:column !important; align-items:stretch !important; writing-mode:horizontal-tb !important; min-width:0 !important; }
+.dd490-food-photo { height:160px !important; min-height:160px !important; max-height:160px !important; aspect-ratio:auto !important; flex:0 0 160px !important; }
+.dd490-food-photo > img { width:100% !important; height:100% !important; object-fit:cover !important; }
+.dd490-food-info { display:block !important; min-width:0 !important; writing-mode:horizontal-tb !important; }
+.dd490-food-info strong { display:-webkit-box !important; -webkit-box-orient:vertical !important; -webkit-line-clamp:2 !important; overflow:hidden !important; white-space:normal !important; overflow-wrap:break-word !important; word-break:normal !important; min-height:0 !important; font-size:14px !important; line-height:1.3 !important; }
+.dd490-food-info small, .dd490-food-kcal { display:none !important; }
+@media (max-width: 480px) {
+ .dd-reference-strip { gap:10px !important; }
+ .dd-reference-card { flex:0 0 44% !important; }
+ .dd-reference-card > img, .dd-reference-card img, .dd-recipe-all-grid .dd-reference-card > img, .dd-recipe-all-grid .dd-reference-card img, .dd490-food-photo { height:140px !important; min-height:140px !important; max-height:140px !important; flex-basis:140px !important; }
+ .dd-recipe-all-grid { grid-template-columns:repeat(2,minmax(0,1fr)) !important; gap:10px !important; }
+}
+</style>
+
+
+<style id="dietdost-mobile-image-size-hard-fix-v1">
+/* Final mobile-first rule: identical image frame height across all recipe cards.
+   Keep this as the last style block so older aspect-ratio/auto-height rules cannot override it. */
+@media (max-width: 620px) {
+  .dd-reference-strip .dd-reference-card > img,
+  .dd-recipe-all-grid .dd-reference-card > img,
+  .dd-recipe-grid .dd-recipe-card > img,
+  .dd-recipe-grid .dd-recipe-card .dd-recipe-feature-photo,
+  .dd-recipe-grid .dd-recipe-card .dd-recipe-photo,
+  .dd490-food-grid .dd490-food-card img,
+  #dd490Grid .dd490-food-card img,
+  #dd490Grid .dd490-food-card .dd490-food-photo,
+  .dd-food-tile img,
+  .dd-feature-list .dd-reference-card img {
+    display:block !important;
+    width:100% !important;
+    height:180px !important;
+    min-height:180px !important;
+    max-height:180px !important;
+    aspect-ratio:auto !important;
+    flex:0 0 180px !important;
+    object-fit:cover !important;
+    object-position:center !important;
+    box-sizing:border-box !important;
+  }
+}
+@media (min-width: 621px) {
+  .dd-reference-strip .dd-reference-card > img,
+  .dd-recipe-all-grid .dd-reference-card > img,
+  .dd-recipe-grid .dd-recipe-card > img,
+  .dd-recipe-grid .dd-recipe-card .dd-recipe-feature-photo,
+  .dd-recipe-grid .dd-recipe-card .dd-recipe-photo,
+  .dd490-food-grid .dd490-food-card img,
+  #dd490Grid .dd490-food-card img,
+  #dd490Grid .dd490-food-card .dd490-food-photo,
+  .dd-food-tile img {
+    display:block !important;
+    width:100% !important;
+    height:270px !important;
+    min-height:270px !important;
+    max-height:270px !important;
+    aspect-ratio:auto !important;
+    object-fit:cover !important;
+    object-position:center !important;
+    box-sizing:border-box !important;
+  }
+}
+</style>
+<style id="dd-final-mobile-recipe-card-fix">
+/* FINAL MOBILE RECIPE CARD FIX: uniform image frame, separate text below */
+.dd-reference-strip .dd-reference-card,
+.dd-recipe-all-grid .dd-reference-card,
+.dd-reference-card {
+  display:flex !important; flex-direction:column !important; align-items:stretch !important;
+  min-width:0 !important; height:auto !important; overflow:hidden !important;
+}
+.dd-reference-card > img,
+.dd-reference-card img,
+.dd-recipe-all-grid .dd-reference-card img {
+  display:block !important; width:100% !important; height:180px !important; min-height:180px !important; max-height:180px !important;
+  aspect-ratio:1 / 1 !important; object-fit:cover !important; object-position:center 28% !important;
+  flex:0 0 180px !important; margin:0 !important; border-radius:0 !important;
+}
+.dd-reference-card .dd-reference-card-copy {
+  display:block !important; position:relative !important; width:100% !important; min-width:0 !important;
+  box-sizing:border-box !important; padding:9px 10px 12px !important; background:#fff !important;
+}
+.dd-reference-card .dd-reference-card-copy h4,
+.dd-reference-card h4 {
+  display:-webkit-box !important; -webkit-box-orient:vertical !important; -webkit-line-clamp:2 !important;
+  overflow:hidden !important; white-space:normal !important; overflow-wrap:break-word !important; word-break:normal !important;
+  writing-mode:horizontal-tb !important; text-orientation:mixed !important; width:100% !important;
+  font-size:14px !important; line-height:1.35 !important; margin:0 !important;
+}
+.dd-reference-card .dd-reference-card-copy p,
+.dd-reference-card .dd-reference-card-copy .time,
+.dd-reference-card .dd-reference-card-copy .kcal,
+.dd-reference-card .dd-reference-card-copy .serving,
+.dd-reference-card .dd-reference-card-copy .category { display:none !important; }
+.dd-reference-card .dd-reference-card-copy h4 + p { display:none !important; }
+@media (max-width: 600px) {
+  .dd-reference-card img, .dd-reference-card > img, .dd-recipe-all-grid .dd-reference-card img {
+    height:180px !important; min-height:180px !important; max-height:180px !important; flex-basis:180px !important;
+  }
+}
+</style>
 </head>
 <body>
 <div class="app">
@@ -1972,7 +2177,7 @@ document.getElementById('backupFile').addEventListener('change',e=>{restoreBacku
  recipes.forEach(r=>{r.category=titleCategory(r.title,r.category)});
  const esc=(s)=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
  const slug=(s)=>String(s).toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
- const card=(r,referenceMode=false,pro=false)=>`<article class="dd-reference-card ${referenceMode?'dd-zip-reference-card':''}" data-recipe-open="${esc(r.title)}" data-category="${esc(r.category)}"><img src="${esc(r.image)}" alt="${esc(r.title)}" loading="lazy" decoding="async"><div class="dd-reference-card-copy"><h4>${esc(r.title)}</h4>${referenceMode?`<div class="dd-zip-recipe-meta"><span>◷ ${esc(r.minutes??20)} ${r.minutes===2||r.minutes===5||r.minutes===7||r.minutes===10||r.minutes===12||r.minutes===15||r.minutes===20||r.minutes===25||r.minutes===30||r.minutes===35||r.minutes===40||r.minutes===45?'Minutes':'Minutes'}</span><span>● ${esc(r.cal??0)} Kcal</span><span>♙ ${esc(r.servings??2)} Serving</span></div>`:`<p>${esc(r.category)}</p>`}</div>${pro?'<span class="dd-zip-pro-badge">PRO</span>':''}</article>`;
+ const card=(r,referenceMode=false,pro=false)=>`<article class="dd-reference-card ${referenceMode?'dd-zip-reference-card':''}" data-recipe-open="${esc(r.title)}" data-category="${esc(r.category)}"><img src="${esc(r.image)}" alt="${esc(r.title)}" loading="lazy" decoding="async"><div class="dd-reference-card-copy"><h4>${esc(r.title)}</h4></div>${pro?'<span class="dd-zip-pro-badge">PRO</span>':''}</article>`;
  const preferenceOptions=[['all','All recipes','✦'],['vegetarian','Vegetarian','🌿'],['vegan','Vegan','🍃'],['heart-healthy','Heart Healthy','♥'],['low-sodium','Low Sodium','♡'],['high-protein','High Protein','💪'],['low-carb','Low Carb','◒'],['gluten-free','Gluten Free','🌾'],['dairy-free','Dairy Free','🥛'],['low-calorie','Low Calorie','⚖'],['whole-grain','Whole Grain','🌾'],['keto-friendly','Keto-Friendly','🥑'],['anti-inflammatory','Anti-Inflammatory','🌼'],['mediterranean','Mediterranean','🫒'],['diabetes-friendly','Diabetes Friendly','◉'],['weight-loss','Weight Loss','🎯'],['quick-easy','Quick & Easy','⚡']];
  let activePreference='all';
  const nonVegPattern=/chicken|fish|salmon|tuna|shrimp|prawn|mutton|beef|steak|sea bass|squid|ayam|rendang|gulai ayam|keema|kabab|kebab|meat|pork|duck|turkey|bacon|sausage|egg|omelette|omelet|egg bhurji|boiled eggs|bread omelette/i;
