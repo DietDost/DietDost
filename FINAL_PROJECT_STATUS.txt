@@ -1,0 +1,16 @@
+DIETDOST FINAL PACKAGE STATUS — 22 OCTOBER 2026
+
+Current master archive: DietDost_FINAL_MASTER_298_Foods.zip
+App entry point: index.html
+PWA files: manifest.json, sw.js, icon.svg
+Final catalogue: 298 foods
+Food mapping: DietDost_298_Food_Image_Map.xlsx and DietDost_298_Food_Image_Map.csv
+Final list: DietDost_Final_Unique_Indian_Food_List.csv
+
+Consolidated areas reflected in this build include the existing DietDost app UI and app logic, onboarding/logout navigation adjustments, service-worker cache refresh, offline app-shell handling, food-image assets and the 298-food catalogue.
+
+Not yet confirmed by this package step: publication to GitHub Pages, end-to-end tests on a physical phone, every food image being a unique exact dish photo, and every feature working in offline mode. Do not treat syntax checks as a substitute for real-device testing.
+
+Data safety: localStorage data from a user's browser/device is not inside the ZIP. Keep browser/site data intact. Downloading this ZIP does not change the live website.
+
+Mobile card fix: food images prefer matching JPG assets when available; mobile cards are forced to show image above horizontally wrapped names. Service worker cache bumped to catalog302. Physical mobile verification still required.

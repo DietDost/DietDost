@@ -1,26 +1,32 @@
-DietDost 490 Indian Food Photo Update
+DIETDOST — FINAL MASTER PROJECT PACKAGE
+Version: 22 October 2026
+Food catalogue target: 298 unique foods
 
-Only image assets and image mapping were updated. index.html and app logic were left unchanged.
+THIS IS THE CURRENT MASTER ZIP
+Use this archive as the current consolidated project package instead of older DietDost ZIP versions. It contains the app files, assets, final 298-food list, image map, manifest and service worker.
 
-The 490 food image paths now show photo-style crops taken from the supplied 35-tile reference collage. Food names map to the nearest visual/category match; the supplied collage does not contain 490 distinct dish-specific photographs, so some photo tiles are reused.
+START HERE
+1. Extract the entire ZIP into one folder. Do not move images/ away from index.html.
+2. Open index.html locally for a basic preview. Some PWA/service-worker behaviour requires HTTPS or localhost.
+3. For GitHub Pages, replace the existing project files with the extracted files while keeping the repository structure. Publish only when you choose to.
+4. After publishing, open the live site online once and allow it to reload/update; then test the installed mobile PWA. This ZIP has NOT been published to GitHub Pages by this package operation.
 
-Assets: images/indian-food-gallery/*.svg (wrappers) and images/food-photo-tiles/*.jpg.
+WHAT IS INCLUDED
+- index.html: current consolidated app build, with the embedded food catalogue set to 298 entries.
+- sw.js: updated service worker cache version dietdost-static-catalog301, intended to refresh older cached app versions.
+- manifest.json and icon.svg.
+- images/: app images and food/learning assets.
+- DietDost_298_Food_Image_Map.xlsx and .csv.
+- DietDost_Final_Unique_Indian_Food_List.csv: final 298-row food list.
+- DIETDOST_IMAGE_UPDATE_LOG.txt.
 
+IMPORTANT VERIFICATION NOTES
+- Both final food CSV files contain 298 data rows.
+- The ZIP passed archive integrity checking and JavaScript syntax checks in the current build process.
+- The embedded app food list has 298 entries. Image paths were checked for file existence within this ZIP, but that does NOT mean every image is a unique or perfectly matching photograph. Some entries use category/fallback images; image identity should be reviewed if exact dish-specific photos are required.
+- The current app code and assets are consolidated here, but a complete real-device test of every feature, offline mode, service-worker update prompt, profile photo offline behaviour, and live GitHub Pages deployment has not been completed.
+- Existing user data is stored in the browser/device. This ZIP does not contain or back up a user's localStorage data. Do not clear browser/site data while replacing files.
+- Budget assumption remains ₹0; no paid service is required by this ZIP itself.
 
-Recipe Breakfast image display fix (16 Oct 2026)
-Updated the actual Recipes library data array for these Breakfast cards:
-- Poha: images/indian-food-gallery/poha.jpg -> images/generated-breakfast/03-kanda-poha.png
-- Idli: images/indian-food-gallery/idli.jpg -> images/generated-breakfast/01-idli.png
-- Masala Dosa: images/indian-food-gallery/plain-dosa.jpg -> images/generated-breakfast/02-masala-dosa.png
-The images are local files included in this ZIP. Replace the project files and hard-refresh the browser to test. This package has not been published to GitHub Pages.
-
-
-Update: Removed duplicate-like Breakfast entry “Sweet Pongal”; retained “Ven Pongal” as the Pongal item. Breakfast list now has 69 items unless a replacement is added.
-
-Update (20 Oct 2026): Logout/onboarding navigation fix
-- Logout now resets the onboarding controller's internal step index to step 1, not just the visible step classes.
-- Step visibility and aria-hidden state are synchronized when moving between onboarding screens.
-- The reset returns to the welcome step, resets the progress display, hides the back button, and returns plan selection to Free without clearing profile/diary storage.
-- Service worker cache version bumped; app shell (index.html, manifest.json, icon.svg) is cached during install so the offline navigation fallback has an actual cached index.html to serve.
-- Static verification: ZIP integrity passed, all 17 inline JavaScript blocks and sw.js passed Node syntax checks, and all static image paths referenced by index.html resolve to files in this package.
-- Limitation: automated real-browser end-to-end logout testing could not be completed in this environment. Test the logout button on a local deployment before publishing.
+PROJECT PRESERVATION
+Keep this ZIP until you have extracted it and confirmed the files are present. For safety, do not delete your existing project folder/repository or browser data just because you downloaded this archive. This package is a project-file backup, not a backup of the data saved inside the installed app.
